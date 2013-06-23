@@ -29,9 +29,9 @@
 </div>
 
 <form method="post" action="{$smarty.server.PHP_SELF}">
-	<input type="hidden" name="sub" value="submit">
-	<input type="hidden" name="action" value="cancel">
-	<input type="hidden" name="id" value="{$id}">
+	<input type="hidden" name="sub" value="submit"/>
+	<input type="hidden" name="action" value="cancel"/>
+	<input type="hidden" name="id" value="{$id}"/>
 	<label for="cancellationreason">{$LANG.clientareacancelreason}</label>
 	<textarea name="cancellationreason" id="cancellationreason" rows="6" class="span12"></textarea>
 	<label for="type">{$LANG.clientareacancellationtype}</label>
@@ -43,11 +43,11 @@
 	<div class="alert alert-warning alert-block">
 		<h4 class="alert-heading">{$LANG.cancelrequestdomain}</h4>
 		{$LANG.cancelrequestdomaindesc|sprintf2:$domainnextduedate:$domainprice:$domainregperiod}
-		<label class="checkbox inline"><input type="checkbox" name="canceldomain" id="canceldomain"> {$LANG.cancelrequestdomainconfirm}</label>
+		<label class="checkbox inline"><input type="checkbox" name="canceldomain" id="canceldomain"/> {$LANG.cancelrequestdomainconfirm}</label>
 	</div>
 	{/if}
 	<div class="form-actions">
-		<input type="submit" name="submit" value="{$LANG.clientareacancelrequestbutton}" class="btn btn-danger">
+		<input type="submit" name="submit" value="{$LANG.clientareacancelrequestbutton}" class="btn btn-danger"/>
 		<a href="clientarea.php?action=productdetails&id={$id}" class="btn" title="{$LANG.cancel}">{$LANG.cancel}</a>
 	</div>
 </form>

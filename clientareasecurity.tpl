@@ -49,12 +49,12 @@
 <p>{$LANG.twofaactivationintro}</p>
 
 <form method="post" action="clientarea.php?action=security">
-	<input type="hidden" name="2fasetup" value="1">
+	<input type="hidden" name="2fasetup" value="1"/>
 	<p align="center">
 		{if $twofastatus}
-		<input type="submit" value="{$LANG.twofadisableclickhere}" class="btn btn-danger">
+		<input type="submit" value="{$LANG.twofadisableclickhere}" class="btn btn-danger"/>
 		{else}
-		<input type="submit" value="{$LANG.twofaenableclickhere}" class="btn btn-success">
+		<input type="submit" value="{$LANG.twofaenableclickhere}" class="btn btn-success"/>
 		{/if}
 	</p>
 </form>
@@ -65,29 +65,29 @@
 {if $securityquestionsenabled && !$twofaactivation}
 
 <form method="post" action="clientarea.php">
-	<input type="hidden" name="action" value="changesq">
+	<input type="hidden" name="action" value="changesq"/>
 	<div class="row">
 		<div class="span10 offset2">
 	{if !$nocurrent}
 			<label class="control-label" for="currentans">{$currentquestion}</label>
-			<input type="password" name="currentsecurityqans" id="currentans">
+			<input type="password" name="currentsecurityqans" id="currentans"/>
 	{/if}
 			<label class="control-label" for="securityqid">{$LANG.clientareasecurityquestion}</label>
 			<select name="securityqid" id="securityqid" class="span3">
 			{foreach key=num item=question from=$securityquestions}
-				<option value={$question.id}>{$question.question}</option>
+				<option value={$question.id}/>{$question.question}</option>
 			{/foreach}
 			</select>
 			<label class="control-label" for="securityqans">{$LANG.clientareasecurityanswer}</label>
-			<input type="password" name="securityqans" id="securityqans">
+			<input type="password" name="securityqans" id="securityqans"/>
 			<label class="control-label" for="securityqans2">{$LANG.clientareasecurityconfanswer}</label>
-			<input type="password" name="securityqans2" id="securityqans2" class="span3">
+			<input type="password" name="securityqans2" id="securityqans2" class="span3"/>
 		</div>
 	</div>
-	<hr>
+	<hr/>
 	<div class="form-actions text-center">
-		<input class="btn btn-primary" type="submit" name="submit" value="{$LANG.clientareasavechanges}">
-		<input class="btn" type="reset" value="{$LANG.cancel}">
+		<input class="btn btn-primary" type="submit" name="submit" value="{$LANG.clientareasavechanges}"/>
+		<input class="btn" type="reset" value="{$LANG.cancel}"/>
 	</div>
 </form>
 {/if}

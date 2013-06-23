@@ -33,31 +33,31 @@
 {/if}
 
 <form class="form-horizontal" method="post" action="clientarea.php">
-	<input type="hidden" name="action" value="creditcard">
+	<input type="hidden" name="action" value="creditcard"/>
 	<h3 class="marginbottom">{$LANG.creditcarddetails}</h3>
 	<div class="control-group">
 		<label class="control-label">{$LANG.creditcardcardtype}</label>
 		<div class="controls">
-			<input type="text" value="{$cardtype}" readonly="readonly" class="span3">
+			<input type="text" value="{$cardtype}" readonly="readonly" class="span3"/>
 		</div>
 	</div>
 	<div class="control-group">
 		<label class="control-label">{$LANG.creditcardcardnumber}</label>
 		<div class="controls">
-			<input type="text" value="{$cardnum}" readonly="readonly" class="span3">
+			<input type="text" value="{$cardnum}" readonly="readonly" class="span3"/>
 		</div>
 	</div>
 	<div class="control-group">
 		<label class="control-label">{$LANG.creditcardcardexpires}</label>
 		<div class="controls">
-			<input type="text" value="{$cardexp}" readonly="readonly" class="span1">
+			<input type="text" value="{$cardexp}" readonly="readonly" class="span1"/>
 		</div>
 	</div>
 {if $cardissuenum}
 	<div class="control-group">
 		<label class="control-label">{$LANG.creditcardcardissuenum}</label>
 		<div class="controls">
-			<input type="text" value="{$cardissuenum}" readonly="readonly" class="span2">
+			<input type="text" value="{$cardissuenum}" readonly="readonly" class="span2"/>
 		</div>
 	</div>
 {/if}
@@ -65,11 +65,11 @@
 	<div class="control-group">
 		<label class="control-label">{$LANG.creditcardcardstart}</label>
 		<div class="controls">
-			<input type="text" value="{$cardstart}" readonly="readonly" class="span2">
+			<input type="text" value="{$cardstart}" readonly="readonly" class="span2"/>
 		</div>
 	</div>
 {/if}
-	<hr>
+	<hr/>
 	<h3 class="marginbottom">{$LANG.creditcardenternewcard}</h3>
 	<div class="control-group">
 		<label class="control-label" for="cctype">{$LANG.creditcardcardtype}</label>
@@ -84,7 +84,7 @@
 	<div class="control-group">
 		<label class="control-label" for="ccnumber">{$LANG.creditcardcardnumber}</label>
 		<div class="controls">
-			<input type="text" name="ccnumber" id="ccnumber" autocomplete="off" class="span3">
+			<input type="text" name="ccnumber" id="ccnumber" autocomplete="off" class="span3"/>
 		</div>
 	</div>
 	<div class="control-group">
@@ -123,19 +123,19 @@
 	<div class="control-group">
 		<label class="control-label" for="ccissuenum">{$LANG.creditcardcardissuenum}</label>
 		<div class="controls">
-			<input type="text" name="ccissuenum" id="ccissuenum" maxlength="3" class="span1">
+			<input type="text" name="ccissuenum" id="ccissuenum" maxlength="3" class="span1"/>
 		</div>
 	</div>
 {/if}
 	<div class="control-group">
 		<label class="control-label" for="cardcvv">{$LANG.creditcardcvvnumber}</label>
 		<div class="controls">
-			<input type="text" class="span1" name="cardcvv" id="cardcvv" value="{$cardcvv}" autocomplete="off">
+			<input type="text" class="span1" name="cardcvv" id="cardcvv" value="{$cardcvv}" autocomplete="off"/>
 		</div>
 	</div>
 	<div class="form-actions">
-		<input class="btn btn-primary" type="submit" name="submit" value="{$LANG.clientareasavechanges}">
-		<input class="btn" type="reset" value="{$LANG.cancel}">
+		<input class="btn btn-primary" type="submit" name="submit" value="{$LANG.clientareasavechanges}"/>
+		<input class="btn" type="reset" value="{$LANG.cancel}"/>
 		{if $allowcustomerdelete && $cardtype}
 		<a href="clientarea.php?action=creditcard&amp;delete=true" class="btn btn-danger">{$LANG.creditcarddelete}</a>
 		{/if}

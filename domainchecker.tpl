@@ -23,27 +23,24 @@
 	<form method="post" action="domainchecker.php">
 		<p>{$LANG.domaincheckerenterdomain}</p>
 		<div class="input-append text-center">
-			<input class="span8 input-large" name="domain" type="text" value="{if $domain}{$domain}{/if}" placeholder="{$LANG.domaincheckerdomainexample}"><button class="btn btn-large" type="button" onclick="jQuery('#mtlds').slideToggle();">{$LANG.searchmultipletlds}</button>
+			<input class="span8 input-large" name="domain" type="text" value="{if $domain}{$domain}{/if}" placeholder="{$LANG.domaincheckerdomainexample}"/><button class="btn btn-large" type="button" onclick="jQuery('#mtlds').slideToggle();">{$LANG.searchmultipletlds}</button>
 		</div>
 		<div id="mtlds" class="hide">
 		{foreach from=$tldslist key=num item=listtld}
-			<label class="checkbox inline"><input type="checkbox" name="tlds[]" value="{$listtld}"{if in_array($listtld,$tlds) || !$tlds && $num==1} checked="checked"{/if}> {$listtld}</label>
+			<label class="checkbox inline"><input type="checkbox" name="tlds[]" value="{$listtld}"{if in_array($listtld,$tlds) || !$tlds && $num==1} checked="checked"{/if}/> {$listtld}</label>
 		{/foreach}
-			<hr>
+			<hr/>
 		</div>
 	{if $capatacha}
 			<p>{$LANG.captchaverify}</p>
-		{if $capatacha eq "recaptcha"}
-			<p>{$recapatchahtml}</p>
-		{else}
-			<img src="includes/verifyimage.php" alt="captcha"> <input type="text" name="code" class="span1" style="margin-bottom:0" maxlength="5">
-		{/if}
-		<hr>
+		{if $capatacha eq "recaptcha"}<p>{$recapatchahtml}</p>
+		{else}<img src="includes/verifyimage.php" alt="captcha"/> <input type="text" name="code" class="span1" style="margin-bottom:0" maxlength="5"/>{/if}
+		<hr/>
 	{/if}
 		<div>
-			<input type="submit" value="{$LANG.checkavailability}" class="btn btn-primary btn-large" onclick="$('#modalpleasewait').modal();">
-			<input type="submit" name="transfer" value="{$LANG.domainstransfer}" class="btn btn-success btn-large" onclick="$('#modalpleasewait').modal();">
-			<input type="submit" name="hosting" value="{$LANG.domaincheckerhostingonly}" class="btn btn-large">
+			<input type="submit" value="{$LANG.checkavailability}" class="btn btn-primary btn-large" onclick="$('#modalpleasewait').modal();"/>
+			<input type="submit" name="transfer" value="{$LANG.domainstransfer}" class="btn btn-success btn-large" onclick="$('#modalpleasewait').modal();"/>
+			<input type="submit" name="hosting" value="{$LANG.domaincheckerhostingonly}" class="btn btn-large"/>
 		</div>
 	</form>
 </div>
@@ -79,19 +76,14 @@
 					<tr>
 						<td class="text-center">
 						{if $result.status eq "available"}
-							<input type="checkbox" name="domains[]" value="{$result.domain}"{if $num eq "0" && $available} checked="checked"{/if}>
-							<input type="hidden" name="domainsregperiod[{$result.domain}]" value="{$result.period}">
-						{else}
-							&times;
-						{/if}
+							<input type="checkbox" name="domains[]" value="{$result.domain}"{if $num eq "0" && $available} checked="checked"{/if}/>
+							<input type="hidden" name="domainsregperiod[{$result.domain}]" value="{$result.period}"/>
+						{else}&times;{/if}
 						</td>
 						<td class="text-center">{$result.domain}</td>
 						<td class="text-center">
-						{if $result.status eq "available"}
-							<span class="badge badge-success">{$LANG.domainavailable}</span>
-						{else}
-							<span class="badge badge-important">{$LANG.domainunavailable}</span>
-						{/if}
+						{if $result.status eq "available"}<span class="badge badge-success">{$LANG.domainavailable}</span>{else}
+							<span class="badge badge-important">{$LANG.domainunavailable}</span>{/if}
 						</td>
 						<td class="text-center">
 						{if $result.status eq "unavailable"}
@@ -112,7 +104,7 @@
 				<tfoot>
 					<tr>
 						<td colspan="4" class="text-right">
-							<input type="submit" value="{$LANG.ordernowbutton}" class="btn btn-large btn-danger">
+							<input type="submit" value="{$LANG.ordernowbutton}" class="btn btn-large btn-danger"/>
 						</td>
 					</tr>
 				</tfoot>
@@ -169,14 +161,14 @@
 
 <div class="modal hide fade in" id="modalpleasewait">
    <div class="modal-header text-center">
-      <h3><img src="images/loadingsml.gif" alt="{$LANG.pleasewait}" class="valignbaseline"> {$LANG.pleasewait}</h3>
+      <h3><img src="images/loadingsml.gif" alt="{$LANG.pleasewait}" class="valignbaseline"/> {$LANG.pleasewait}</h3>
    </div>
 </div>
 
 <div class="modal hide fade in" id="modalwhois">
 	<div class="modal-header">
 		<button class="close" data-dismiss="modal">&times;</button>
-		<h3>{$LANG.whoisresults} <span><img src="images/loadingsml.gif" alt="{$LANG.pleasewait}" class="valignbaseline"></span></h3>
+		<h3>{$LANG.whoisresults} <span><img src="images/loadingsml.gif" alt="{$LANG.pleasewait}" class="valignbaseline"/></span></h3>
 	</div>
 	<div class="modal-body"></div>
 	<div class="modal-footer">

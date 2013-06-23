@@ -1,10 +1,10 @@
 <div class="alert alert-warning">{$message}</div>
 
-<hr>
+<hr/>
 
-<p class="text-center"><img src="images/loading.gif" alt="Loading" border="0"></p>
+<p class="text-center"><img src="images/loading.gif" alt="Loading" border="0"/></p>
 
-<hr>
+<hr/>
 
 <div class="text-center">{$code}</div>
 

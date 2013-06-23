@@ -125,9 +125,9 @@
 {/if}
 					</ul>
 {if $moduleclientarea}
-					<hr>
+					<hr/>
 					<div class="moduleoutput">{$moduleclientarea|replace:'modulebutton':'btn'}</div>
-					<hr>
+					<hr/>
 {/if}
 				</div>
 			</div>
@@ -141,21 +141,21 @@
 				</div>
 				<div class="span8">
 					<form method="post" action="{$smarty.server.PHP_SELF}" class="form-horizontal">
-						<input type="hidden" name="id" value="{$id}">
-						<input type="hidden" name="modulechangepassword" value="true">
+						<input type="hidden" name="id" value="{$id}"/>
+						<input type="hidden" name="modulechangepassword" value="true"/>
 						<fieldset>
-							<input type="hidden" name="action" value="productdetails">
+							<input type="hidden" name="action" value="productdetails"/>
 							<div class="control-group">
 								<label class="control-label" for="password">{$LANG.newpassword}</label>
 								<div class="controls">
-									<input type="password" name="newpw" id="password">
+									<input type="password" name="newpw" id="password"/>
 									<span class="help-inline"></span>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="confirmpw">{$LANG.confirmnewpassword}</label>
 								<div class="controls">
-									<input type="password" name="confirmpw" id="confirmpw" class="">
+									<input type="password" name="confirmpw" id="confirmpw" class=""/>
 									<span class="help-inline"></span>
 								</div>
 							</div>

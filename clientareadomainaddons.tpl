@@ -1,11 +1,11 @@
 <form method="post" action="{$smarty.server.PHP_SELF}?action=domainaddons" class="form-horizontal">
-	<input type="hidden" name="{$action}" value="{$addon}">
-	<input type="hidden" name="id" value="{$domainid}">
-	<input type="hidden" name="confirm" value="1">
-	<input type="hidden" name="token" value="{$token}">
+	<input type="hidden" name="{$action}" value="{$addon}"/>
+	<input type="hidden" name="id" value="{$domainid}"/>
+	<input type="hidden" name="confirm" value="1"/>
+	<input type="hidden" name="token" value="{$token}"/>
 
 {if $action eq "buy"}
-	<input type="hidden" name="buy" value="{$addon}">
+	<input type="hidden" name="buy" value="{$addon}"/>
 
 	{if $addon eq "dnsmanagement"}
 	<div class="page-header">
@@ -14,7 +14,7 @@
 
 	<div class="text-center">
 		<p>{$LANG.domainaddonsdnsmanagementinfo}</p>
-		<input type="submit" name="enable" value="{$LANG.domainaddonsbuynow} {$addonspricing.dnsmanagement}{$LANG.domainaddonsperyear}" class="btn btn-success btn-large">
+		<input type="submit" name="enable" value="{$LANG.domainaddonsbuynow} {$addonspricing.dnsmanagement}{$LANG.domainaddonsperyear}" class="btn btn-success btn-large"/>
 	</div>
 
 	{elseif $addon eq "emailfwd"}
@@ -25,7 +25,7 @@
 	
 	<div class="text-center">
 		<p>{$LANG.domainaddonsemailforwardinginfo}</p>
-		<input type="submit" name="enable" value="{$LANG.domainaddonsbuynow} {$addonspricing.emailforwarding}{$LANG.domainaddonsperyear}" class="btn btn-success btn-large">
+		<input type="submit" name="enable" value="{$LANG.domainaddonsbuynow} {$addonspricing.emailforwarding}{$LANG.domainaddonsperyear}" class="btn btn-success btn-large"/>
 	</div>
 
 	{elseif $addon eq "idprotect"}
@@ -36,12 +36,12 @@
 
 	<div class="text-center">
 		<p>{$LANG.domainaddonsidprotectioninfo}</p>
-		<input type="submit" name="enable" value="{$LANG.domainaddonsbuynow} {$addonspricing.idprotection}{$LANG.domainaddonsperyear}" class="btn btn-success btn-large">
+		<input type="submit" name="enable" value="{$LANG.domainaddonsbuynow} {$addonspricing.idprotection}{$LANG.domainaddonsperyear}" class="btn btn-success btn-large"/>
 	</div>
 
 	{/if}
 {elseif $action eq "disable"}
-	<input type="hidden" name="disable" value="{$addon}">
+	<input type="hidden" name="disable" value="{$addon}"/>
 	
 	{if $addon eq "idprotect"}
 	<div class="page-header">
@@ -60,7 +60,7 @@
 
 	<p class="text-center">{$LANG.domainaddonscancelareyousure}</p>
 		
-	<input type="submit" name="enable" value="{$LANG.domainaddonsconfirm}" class="btn btn-danger btn-large">
+	<input type="submit" name="enable" value="{$LANG.domainaddonsconfirm}" class="btn btn-danger btn-large"/>
 	{/if}
 
 {/if}

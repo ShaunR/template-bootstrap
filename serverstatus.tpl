@@ -92,12 +92,12 @@
 {foreach from=$servers key=num item=server}
 		<tr>
 			<td>{$server.name}</td>
-			<td class="text-center" id="port80_{$num}"><img src="images/loadingsml.gif" alt="{$LANG.loading}"></td>
-			<td class="text-center" id="port21_{$num}"><img src="images/loadingsml.gif" alt="{$LANG.loading}"></td>
-			<td class="text-center" id="port110_{$num}"><img src="images/loadingsml.gif" alt="{$LANG.loading}"></td>
+			<td class="text-center" id="port80_{$num}"><img src="images/loadingsml.gif" alt="{$LANG.loading}"/></td>
+			<td class="text-center" id="port21_{$num}"><img src="images/loadingsml.gif" alt="{$LANG.loading}"/></td>
+			<td class="text-center" id="port110_{$num}"><img src="images/loadingsml.gif" alt="{$LANG.loading}"/></td>
 			<td class="text-center"><a href="{$server.phpinfourl}" target="_blank">{$LANG.serverstatusphpinfo}</a></td>
-			<td class="text-center" id="load{$num}"><img src="images/loadingsml.gif" alt="{$LANG.loading}"></td>
-			<td class="text-center" id="uptime{$num}"><img src="images/loadingsml.gif" alt="{$LANG.loading}"><script type="text/javascript">checkPort({$num},80);checkPort({$num},21);checkPort({$num},110);getStats({$num});</script></td>
+			<td class="text-center" id="load{$num}"><img src="images/loadingsml.gif" alt="{$LANG.loading}"/></td>
+			<td class="text-center" id="uptime{$num}"><img src="images/loadingsml.gif" alt="{$LANG.loading}"/><script type="text/javascript">checkPort({$num},80);checkPort({$num},21);checkPort({$num},110);getStats({$num});</script></td>
 		</tr>
 {foreachelse}
 		<tr>
@@ -110,5 +110,5 @@
 {/if}
 
 <div class="text-right">
-	<img src="images/rssfeed.gif" alt="RSS" class="valigntextbottom"> <a href="networkissuesrss.php">{$LANG.announcementsrss}</a>
+	<img src="images/rssfeed.gif" alt="RSS" class="valigntextbottom"/> <a href="networkissuesrss.php">{$LANG.announcementsrss}</a>
 </div>

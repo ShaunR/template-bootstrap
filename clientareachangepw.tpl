@@ -31,30 +31,30 @@
 {/if}
 
 <form class="form-horizontal" method="post" action="clientarea.php">
-	<input type="hidden" name="action" value="changepw">
+	<input type="hidden" name="action" value="changepw"/>
 	<div class="control-group">
 		<label class="control-label" for="existingpw">{$LANG.existingpassword}</label>
 		<div class="controls">
-			<input type="password" name="existingpw" id="existingpw" class="span3">
+			<input type="password" name="existingpw" id="existingpw" class="span3"/>
 		</div>
 	</div>
 	<div class="control-group">
 		<label class="control-label" for="password">{$LANG.newpassword}</label>
 		<div class="controls">
-			<input type="password" name="newpw" id="password" class="span3">
+			<input type="password" name="newpw" id="password" class="span3"/>
 			<span class="help-inline"></span>
 		</div>
 	</div>
 	<div class="control-group">
 		<label class="control-label" for="confirmpw">{$LANG.confirmnewpassword}</label>
 		<div class="controls">
-			<input type="password" name="confirmpw" id="confirmpw" class="span3">
+			<input type="password" name="confirmpw" id="confirmpw" class="span3"/>
 			<span class="help-inline"></span>
 		</div>
 	</div>
 	<div class="form-actions">
-		<input class="btn btn-primary" type="submit" name="submit" value="{$LANG.clientareasavechanges}">
-		<input class="btn" type="reset" value="{$LANG.cancel}">
+		<input class="btn btn-primary" type="submit" name="submit" value="{$LANG.clientareasavechanges}"/>
+		<input class="btn" type="reset" value="{$LANG.cancel}"/>
 	</div>
 </form>
 

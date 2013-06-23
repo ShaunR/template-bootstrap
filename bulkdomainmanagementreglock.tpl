@@ -36,6 +36,6 @@
 	<input type="hidden" name="domids[]" value="{$domainid}">
 	{/foreach}
 	<h4 class="marginbottom">{$LANG.domainreglockrecommend}</h4>
-	<input type="submit" name="enable" value="{$LANG.domainreglockenable}" class="btn btn-success btn-large">
-	<input type="submit" name="disable" value="{$LANG.domainreglockdisable}" class="btn btn-danger btn-large">
+	<input type="submit" name="enable" value="{$LANG.domainreglockenable}" class="btn btn-success btn-large"/>
+	<input type="submit" name="disable" value="{$LANG.domainreglockdisable}" class="btn btn-danger btn-large"/>
 </form>

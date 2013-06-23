@@ -18,9 +18,9 @@
 {else}
 
 <form class="form-horizontal" method="post" action="clientarea.php">
-	<input type="hidden" name="action" value="domaindns">
-	<input type="hidden" name="sub" value="save">
-	<input type="hidden" name="domainid" value="{$domainid}">
+	<input type="hidden" name="action" value="domaindns"/>
+	<input type="hidden" name="sub" value="save"/>
+	<input type="hidden" name="domainid" value="{$domainid}"/>
 	<table class="table table-bordered table-striped">
 		<thead>
 			<tr>
@@ -34,8 +34,8 @@
 		{foreach from=$dnsrecords item=dnsrecord}
 			<tr>
 				<td>
-					<input type="hidden" name="dnsrecid[]" value="{$dnsrecord.recid}">
-					<input type="text" name="dnsrecordhost[]" value="{$dnsrecord.hostname}" class="span3">
+					<input type="hidden" name="dnsrecid[]" value="{$dnsrecord.recid}"/>
+					<input type="text" name="dnsrecordhost[]" value="{$dnsrecord.hostname}" class="span3"/>
 				</td>
 				<td>
 					<select name="dnsrecordtype[]" class="span2">
@@ -49,18 +49,18 @@
 						<option value="FRAME"{if $dnsrecord.type eq "FRAME"} selected="selected"{/if}>URL Frame</option>
 					</select>
 				</td>
-				<td><input type="text" name="dnsrecordaddress[]" value="{$dnsrecord.address}" class="span3"></td>
+				<td><input type="text" name="dnsrecordaddress[]" value="{$dnsrecord.address}" class="span3"/></td>
           		<td>
 				{if $dnsrecord.type eq "MX"}
-					<input type="text" name="dnsrecordpriority[]" value="{$dnsrecord.priority}" class="span1"> <i class="icon icon-question-sign" rel="tooltip" data-original-title="{$LANG.domaindnsmxonly}"></i>
+					<input type="text" name="dnsrecordpriority[]" value="{$dnsrecord.priority}" class="span1"/> <i class="icon icon-question-sign" rel="tooltip" data-original-title="{$LANG.domaindnsmxonly}"></i>
 				{else}
-					<input type="hidden" name="dnsrecordpriority[]" value="N/A">{$LANG.domainregnotavailable}
+					<input type="hidden" name="dnsrecordpriority[]" value="N/A"/>{$LANG.domainregnotavailable}
 				{/if}
 				</td>
 			</tr>
 		{/foreach}
 			<tr>
-				<td><input type="text" name="dnsrecordhost[]" value="" class="span3"></td>
+				<td><input type="text" name="dnsrecordhost[]" value="" class="span3"/></td>
 				<td>
 					<select name="dnsrecordtype[]" class="span2">
 						<option value="A">A (Address)</option>
@@ -73,14 +73,14 @@
 						<option value="FRAME">URL Frame</option>
 					</select>
 				</td>
-				<td><input type="text" name="dnsrecordaddress[]" value="" class="span3"></td>
-				<td><input type="text" name="dnsrecordpriority[]" value="" class="span1"> <i class="icon icon-question-sign" rel="tooltip" data-original-title="{$LANG.domaindnsmxonly}"></i></td>
+				<td><input type="text" name="dnsrecordaddress[]" value="" class="span3"/></td>
+				<td><input type="text" name="dnsrecordpriority[]" value="" class="span1"/> <i class="icon icon-question-sign" rel="tooltip" data-original-title="{$LANG.domaindnsmxonly}"></i></td>
 			</tr>
 		</tbody>
 		<tfoot>
 			<tr>
 				<td colspan="4" class="text-right">
-					<input type="submit" value="{$LANG.clientareasavechanges}" class="btn btn-primary btn-large">
+					<input type="submit" value="{$LANG.clientareasavechanges}" class="btn btn-primary btn-large"/>
 				</td>
 			</tr>
 		</tfoot>

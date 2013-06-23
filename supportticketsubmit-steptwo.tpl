@@ -13,34 +13,26 @@
 {/if}
 
 <form name="submitticket" method="post" action="{$smarty.server.PHP_SELF}" enctype="multipart/form-data">
-	<input type="hidden" name="step" value="3">
+	<input type="hidden" name="step" value="3"/>
 	<div class="row">
 		<div class="span4">
 			<label for="name">{$LANG.supportticketsclientname}</label>
-			{if $loggedin}
-			<input class="span4 disabled" type="text" id="name" value="{$clientname}" disabled="disabled">
-			{else}
-			<input class="span4" type="text" name="name" id="name" value="{$name}">
-			{/if}
+			{if $loggedin}<input class="span4 disabled" type="text" id="name" value="{$clientname}" disabled="disabled"/>
+			{else}<input class="span4" type="text" name="name" id="name" value="{$name}"/>{/if}
 		</div>
 		<div class="span4">
 			<label for="email">{$LANG.supportticketsclientemail}</label>
-			{if $loggedin}
-			<input class="span4 disabled" type="text" id="email" value="{$email}" disabled="disabled">
-			{else}
-			<input class="span4" type="text" name="email" id="email" value="{$email}">
-			{/if}
+			{if $loggedin}<input class="span4 disabled" type="text" id="email" value="{$email}" disabled="disabled"/>
+			{else}<input class="span4" type="text" name="email" id="email" value="{$email}"/>{/if}
 		</div>
 	</div>
 	<label for="subject">{$LANG.supportticketsticketsubject}</label>
-	<input class="span12" type="text" name="subject" id="subject" value="{$subject}">
+	<input class="span12" type="text" name="subject" id="subject" value="{$subject}"/>
 	<div class="row">
 		<div class="span3">
 			<label for="name">{$LANG.supportticketsdepartment}</label>
 			<select name="deptid" class="span3">
-			{foreach from=$departments item=department}
-				<option value="{$department.id}"{if $department.id eq $deptid} selected="selected"{/if}>{$department.name}</option>
-			{/foreach}
+			{foreach from=$departments item=department}<option value="{$department.id}"{if $department.id eq $deptid} selected="selected"{/if}>{$department.name}</option>{/foreach}
 			</select>
 		</div>
 		<div class="span3">
@@ -71,14 +63,14 @@
 {/foreach}
 	<div id="attachements">
 		<h3>Attachements</h3>
-		<input type="file" name="attachments[]">
+		<input type="file" name="attachments[]"/>
 	</div>
 	<script type="text/javascript">
 	{literal}
 	function extraAttachment() { $("#attachements").append('<div><input type="file" name="attachments[]"></div>');}
 	{/literal}
 	</script>
-	<a href="#" onclick="extraAttachment();return false;"><img src="images/add.gif" alt="add icon"> {$LANG.addmore}</a>
+	<a href="#" onclick="extraAttachment();return false;"><img src="images/add.gif" alt="add icon"/> {$LANG.addmore}</a>
 	({$LANG.supportticketsallowedextensions}: {$allowedfiletypes})
 
 	<div id="searchresults" class="hide" ></div>
@@ -87,23 +79,20 @@
 	<h3>{$LANG.captchatitle}</h3>
 	<p>{$LANG.captchaverify}</p>
 	<div class="text-center">
-	{if $capatacha eq "recaptcha"}
-		{$recapatchahtml}
-	{else}
-		<img src="includes/verifyimage.php" alt="captcha"> <input type="text" name="code" class="span2" maxlength="5">
-	{/if}
+	{if $capatacha eq "recaptcha"}{$recapatchahtml}
+	{else}<img src="includes/verifyimage.php" alt="captcha"/> <input type="text" name="code" class="span2" maxlength="5"/>{/if}
 {/if}
 
 	<div class="form-actions">
-	    <input class="btn btn-primary" type="submit" name="save" value="{$LANG.supportticketsticketsubmit}" onclick="$('#modalpleasewait').modal();">
-	    <input class="btn" type="reset" value="{$LANG.cancel}">
+	    <input class="btn btn-primary" type="submit" name="save" value="{$LANG.supportticketsticketsubmit}" onclick="$('#modalpleasewait').modal();"/>
+	    <input class="btn" type="reset" value="{$LANG.cancel}"/>
 	</div>
 
 </form>
 
 <div class="modal hide fade in" id="modalpleasewait">
 	<div class="modal-header text-center">
-		<h3><img src="images/loadingsml.gif" class="valignbaseline"> {$LANG.pleasewait}</h3>
+		<h3><img src="images/loadingsml.gif" class="valignbaseline"/> {$LANG.pleasewait}</h3>
 	</div>
 </div>
 

@@ -24,18 +24,18 @@
 				</div>
 				<div class="span8">
 					<form method="post" action="{$smarty.server.PHP_SELF}?action=domainregisterns#tab-create" class="form-horizontal">
-						<input type="hidden" name="sub" value="register">
-						<input type="hidden" name="domainid" value="{$domainid}">
+						<input type="hidden" name="sub" value="register"/>
+						<input type="hidden" name="domainid" value="{$domainid}"/>
 						<div class="control-group">
 							<label class="control-label" for="createns">{$LANG.domainregisternsns}</label>
 							<div class="controls">
-								<input type="text" name="ns" id="createns" class="span2"> . {$domain}
+								<input type="text" name="ns" id="createns" class="span2"/> . {$domain}
 							</div>
 						</div>
 						<div class="control-group">
 							<label class="control-label" for="createip">{$LANG.domainregisternsip}</label>
 							<div class="controls">
-								<input type="text" name="ipaddress" id="createip" class="span2">
+								<input type="text" name="ipaddress" id="createip" class="span2"/>
 							</div>
 						</div>
 						<div class="form-actions">
@@ -54,24 +54,24 @@
 				</div>
 				<div class="span8">
 					<form method="post" action="{$smarty.server.PHP_SELF}?action=domainregisterns#tab-modify" class="form-horizontal">
-						<input type="hidden" name="sub" value="modify">
-						<input type="hidden" name="domainid" value="{$domainid}">
+						<input type="hidden" name="sub" value="modify"/>
+						<input type="hidden" name="domainid" value="{$domainid}"/>
 						<div class="control-group">
 							<label class="control-label" for="modifyns">{$LANG.domainregisternsns}</label>
 							<div class="controls">
-								<input type="text" name="ns" id="modifyns" class="span2"> . {$domain}
+								<input type="text" name="ns" id="modifyns" class="span2"/> . {$domain}
 							</div>
 						</div>
 						<div class="control-group">
 							<label class="control-label" for="modifyoldip">{$LANG.domainregisternscurrentip}</label>
 							<div class="controls">
-								<input type="text" name="currentipaddress" id="modifyoldip" class="span2">
+								<input type="text" name="currentipaddress" id="modifyoldip" class="span2"/>
 							</div>
 						</div>
 						<div class="control-group">
 							<label class="control-label" for="modifynewip">{$LANG.domainregisternsnewip}</label>
 							<div class="controls">
-								<input type="text" name="newipaddress" id="modifyoldip" class="span2">
+								<input type="text" name="newipaddress" id="modifyoldip" class="span2"/>
 							</div>
 						</div>
 						<div class="form-actions">
@@ -90,12 +90,12 @@
 				</div>
 				<div class="span8">
 					<form method="post" action="{$smarty.server.PHP_SELF}?action=domainregisterns#tab-delete" class="form-horizontal">
-						<input type="hidden" name="sub" value="delete">
-						<input type="hidden" name="domainid" value="{$domainid}">
+						<input type="hidden" name="sub" value="delete"/>
+						<input type="hidden" name="domainid" value="{$domainid}"/>
 						<div class="control-group">
 							<label class="control-label" for="deletens">{$LANG.domainregisternsns}</label>
 							<div class="controls">
-								<input type="text" name="ns" id="deletens" class="span2"> . {$domain}
+								<input type="text" name="ns" id="deletens" class="span2"/> . {$domain}
 							</div>
 						</div>
 						<div class="form-actions">

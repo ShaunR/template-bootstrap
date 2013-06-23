@@ -27,21 +27,18 @@
 	<tr>
 		<td>
 			<form method="post" action="upgrade.php" class="form-inline nomarginbottom">
-				<input type="hidden" name="step" value="2">
-				<input type="hidden" name="type" value="{$type}">
-				<input type="hidden" name="id" value="{$id}">
-				<input type="hidden" name="pid" value="{$upgradepackage.pid}">
+				<input type="hidden" name="step" value="2"/>
+				<input type="hidden" name="type" value="{$type}"/>
+				<input type="hidden" name="id" value="{$id}"/>
+				<input type="hidden" name="pid" value="{$upgradepackage.pid}"/>
 				<div class="row-fluid">
 					<div class="span6">
 						<h4>{if $upgradepackage.groupname}{$upgradepackage.groupname} - {/if}{$upgradepackage.name}</h4>
 					</div>
 					<div class="span3">
-						{if $upgradepackage.pricing.type eq "free"}
-						{$LANG.orderfree}
-						<input type="hidden" name="billingcycle" value="free">
-						{elseif $upgradepackage.pricing.type eq "onetime"}
-						{$upgradepackage.pricing.onetime} {$LANG.orderpaymenttermonetime}
-						<input type="hidden" name="billingcycle" value="onetime">
+						{if $upgradepackage.pricing.type eq "free"}{$LANG.orderfree}<input type="hidden" name="billingcycle" value="free"/>
+						{elseif $upgradepackage.pricing.type eq "onetime"}{$upgradepackage.pricing.onetime} {$LANG.orderpaymenttermonetime}
+						<input type="hidden" name="billingcycle" value="onetime"/>
 						{elseif $upgradepackage.pricing.type eq "recurring"}
 						<select name="billingcycle">
 							{if $upgradepackage.pricing.monthly}<option value="monthly">{$upgradepackage.pricing.monthly}</option>{/if}
@@ -54,7 +51,7 @@
 						{/if}
 					</div>
 					<div class="span3 text-right">
-						<input type="submit" value="{$LANG.upgradedowngradechooseproduct}" class="btn">
+						<input type="submit" value="{$LANG.upgradedowngradechooseproduct}" class="btn"/>
 					</div>
 				</div>
 			</form>
@@ -77,9 +74,9 @@
 <p>{$LANG.upgradechooseconfigoptions}</p>
 
 <form method="post" action="upgrade.php" class="form-inline">
-	<input type="hidden" name="step" value="2">
-	<input type="hidden" name="type" value="{$type}">
-	<input type="hidden" name="id" value="{$id}">
+	<input type="hidden" name="step" value="2"/>
+	<input type="hidden" name="type" value="{$type}"/>
+	<input type="hidden" name="id" value="{$id}"/>
 	<table class="table table-striped table-bordered">
 		<thead>
 			<tr>
@@ -114,7 +111,7 @@
 					</select>
 				{elseif $configoption.optiontype eq 3}
 					<label class="checkbox">
-						<input type="checkbox" name="configoption[{$configoption.id}]" value="1"{if $configoption.selectedqty} checked="checked"{/if}> 
+						<input type="checkbox" name="configoption[{$configoption.id}]" value="1"{if $configoption.selectedqty} checked="checked"{/if}/> 
 						{$configoption.options.0.name}
 					</label>
 				{elseif $configoption.optiontype eq 4}
@@ -127,7 +124,7 @@
 	</table>
 
 	<div class="text-center">
-		<input type="submit" value="{$LANG.ordercontinuebutton}" class="btn btn-primary btn-large">
+		<input type="submit" value="{$LANG.ordercontinuebutton}" class="btn btn-primary btn-large"/>
 	</div>
 
 </form>

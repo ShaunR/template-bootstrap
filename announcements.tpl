@@ -28,12 +28,12 @@
 	<div class="fb-like" data-href="{$systemurl}{if $seofriendlyurls}announcements/{$announcement.id}/{$announcement.urlfriendlytitle}.html{else}announcements.php?id={$announcement.id}{/if}" data-send="true" data-width="450" data-show-faces="true" data-action="recommend"></div>
 {/if}
 </div>
-<hr>
+<hr/>
 {foreachelse}
 	<p class="text-center marginbottom"><strong>{$LANG.announcementsnone}</strong></p>
 {/foreach}
 
-<div class="pull-left"><img src="images/rssfeed.gif" alt="{$LANG.announcementsrss}" class="valigntop"> <a href="announcementsrss.php">{$LANG.announcementsrss}</a></div>
+<div class="pull-left"><img src="images/rssfeed.gif" alt="{$LANG.announcementsrss}" class="valigntop"/> <a href="announcementsrss.php">{$LANG.announcementsrss}</a></div>
 
 <div class="pagination pagination-right">
    <ul>

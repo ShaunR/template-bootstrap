@@ -3,7 +3,7 @@
 </div>
 
 <form method="post" action="clientarea.php?action=masspay">
-	<input type="hidden" name="geninvoice" value="true">
+	<input type="hidden" name="geninvoice" value="true"/>
 	<table class="table table-bordered table-striped">
 		<thead>
 			<tr>
@@ -14,7 +14,7 @@
 		<tbody>
 		{foreach from=$invoiceitems key=invid item=invoiceitem}
 			<tr>
-				<td colspan="2"><strong>{$LANG.invoicenumber} {$invid}</strong> <input type="hidden" name="invoiceids[]" value="{$invid}"></td>
+				<td colspan="2"><strong>{$LANG.invoicenumber} {$invid}</strong> <input type="hidden" name="invoiceids[]" value="{$invid}"/></td>
 			</tr>
 			{foreach from=$invoiceitem item=item}
 			<tr>
@@ -68,9 +68,7 @@
 	<div class="well text-center">
 		<h3>{$LANG.orderpaymentmethod}</h3>
 		<select name="paymentmethod">
-		{foreach from=$gateways key=num item=gateway}
-			<option value="{$gateway.sysname}"{if $gateway.sysname eq $defaultgateway} selected="selected"{/if}>{$gateway.name}</option>
-		{/foreach}
+		{foreach from=$gateways key=num item=gateway}<option value="{$gateway.sysname}"{if $gateway.sysname eq $defaultgateway} selected="selected"{/if}>{$gateway.name}</option>{/foreach}
 		</select>
 		<div><button class="btn btn-primary btn-large">{$LANG.masspaymakepayment}</button></div>
 	</div>
