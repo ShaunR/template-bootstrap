@@ -21,17 +21,17 @@
 
 		<p class="lead text-center">{$LANG.pwresetenternewpw}</p>
 		<form class="form-horizontal" method="post" action="{$smarty.server.PHP_SELF}?action=pwreset">
-			<input type="hidden" name="key" id="key" value="{$key}">
+			<input type="hidden" name="key" id="key" value="{$key}"/>
 			<div class="control-group">
 				<label class="control-label" for="password">{$LANG.newpassword}</label>
 				<div class="controls">
-					<input type="password" name="newpw" id="password">
+					<input type="password" name="newpw" id="password"/>
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label" for="confirmpw">{$LANG.confirmnewpassword}</label>
 				<div class="controls">
-					<input type="password" name="confirmpw" id="confirmpw">
+					<input type="password" name="confirmpw" id="confirmpw"/>
 				</div>
 			</div>
 			<div class="control-group">
@@ -41,8 +41,8 @@
 				</div>
 			</div>
 			<div class="form-actions">
-				<input class="btn btn-primary" type="submit" name="submit" value="{$LANG.clientareasavechanges}">
-				<input class="btn" type="reset" value="{$LANG.cancel}">
+				<input class="btn btn-primary" type="submit" name="submit" value="{$LANG.clientareasavechanges}"/>
+				<input class="btn" type="reset" value="{$LANG.cancel}"/>
 			</div>
 		</form>
 		{/if}

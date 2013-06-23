@@ -11,7 +11,7 @@
 	</ul>
 </div>
 
-<input type="button" value="{$LANG.clientareabacklink}" class="btn" onclick="history.go(-1)">
+<input type="button" value="{$LANG.clientareabacklink}" class="btn" onclick="history.go(-1)"/>
 
 {else}
 
@@ -22,9 +22,9 @@
 <p>{$LANG.sslconfigcompletedetails}</p>
 
 <form method="post" action="clientarea.php">
-	<input type="hidden" name="action" value="productdetails">
-	<input type="hidden" name="id" value="{$serviceid}">
-	<input type="submit" value="{$LANG.invoicesbacktoclientarea}" class="btn">
+	<input type="hidden" name="action" value="productdetails"/>
+	<input type="hidden" name="id" value="{$serviceid}"/>
+	<input type="submit" value="{$LANG.invoicesbacktoclientarea}" class="btn"/>
 </form>
 
 {/if}

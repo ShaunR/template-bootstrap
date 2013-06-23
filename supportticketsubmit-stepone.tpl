@@ -9,7 +9,7 @@
 		<ul class="thumbnails">
 		{foreach from=$departments item=department}
 			<li class="span5">
-				<h3><img src="images/emails.gif" alt="email icon"> <a href="{$smarty.server.PHP_SELF}?step=2&amp;deptid={$department.id}" title="{$department.name}">{$department.name}</a></h3>
+				<h3><img src="images/emails.gif" alt="email icon"/> <a href="{$smarty.server.PHP_SELF}?step=2&amp;deptid={$department.id}" title="{$department.name}">{$department.name}</a></h3>
 				{if $department.description}<p>{$department.description}</p>{/if}
 			</li>
 		{foreachelse}

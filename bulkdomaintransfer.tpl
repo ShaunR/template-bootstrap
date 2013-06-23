@@ -21,7 +21,7 @@
 
 <div class="well text-center">
 	<form method="post" action="domainchecker.php">
-		<input type="hidden" name="search" value="bulktransfer">
+		<input type="hidden" name="search" value="bulktransfer"/>
 		<p>{$LANG.domainbulktransferdescription}</p>
 		<div class="text-center">
 			<textarea name="bulkdomains" rows="8" class="span8">{$bulkdomains}</textarea>
@@ -31,11 +31,11 @@
 		{if $capatacha eq "recaptcha"}
 			<p>{$recapatchahtml}</p>
 		{else}
-			<img src="includes/verifyimage.php" alt="captcha"> <input type="text" name="code" class="span1" style="margin-bottom:0" maxlength="5">
+			<img src="includes/verifyimage.php" alt="captcha"/> <input type="text" name="code" class="span1" style="margin-bottom:0" maxlength="5"/>
 		{/if}
-		<hr>
+		<hr/>
 	{/if}
-		<input type="submit" value="{$LANG.domainstransfer}" class="btn btn-primary btn-large">
+		<input type="submit" value="{$LANG.domainstransfer}" class="btn btn-primary btn-large"/>
 	</form>
 </div>
 
@@ -49,16 +49,16 @@
 <div class="row">
 	<div class="span10 offset1">
 		<form method="post" action="{$systemsslurl}cart.php" class="form-horizontal">
-			<input type="hidden" name="a" value="add">
-			<input type="hidden" name="domain" value="transfer">
+			<input type="hidden" name="a" value="add"/>
+			<input type="hidden" name="domain" value="transfer"/>
 			<table class="table table-striped table-bordered">
 				<tbody>
 				{foreach from=$availabilityresults key=num item=result}
 					<tr>
 						<td class="text-center">
 						{if $result.status eq "unavailable"}
-							<input type="checkbox" name="domains[]" value="{$result.domain}"{if $num eq "0" && $available} checked="checked"{/if}>
-							<input type="hidden" name="domainsregperiod[{$result.domain}]" value="{$result.period}">
+							<input type="checkbox" name="domains[]" value="{$result.domain}"{if $num eq "0" && $available} checked="checked"{/if}/>
+							<input type="hidden" name="domainsregperiod[{$result.domain}]" value="{$result.period}"/>
 						{else}
 							&times;
 						{/if}
@@ -86,7 +86,7 @@
 				<tfoot>
 					<tr>
 						<td colspan="4" class="text-right">
-							<input type="submit" value="{$LANG.ordernowbutton} &raquo;" class="btn btn-large btn-danger">
+							<input type="submit" value="{$LANG.ordernowbutton} &raquo;" class="btn btn-large btn-danger"/>
 						</td>
 					</tr>
 				</tfoot>

@@ -17,5 +17,5 @@
 <p>{$LANG.subaccountcontactmaster}</p>
 
 <div class="text-center">
-	<input type="button" value="{$LANG.clientareabacklink}" onclick="history.go(-1)" class="btn">
+	<input type="button" value="{$LANG.clientareabacklink}" onclick="history.go(-1)" class="btn"/>
 </p>

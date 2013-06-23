@@ -4,7 +4,7 @@
 
 {if !$status}
 	<p>{$LANG.sslinvalidlink}</p>
-	<input type="button" value="{$LANG.clientareabacklink}" class="btn" onclick="history.go(-1)">
+	<input type="button" value="{$LANG.clientareabacklink}" class="btn" onclick="history.go(-1)"/>
 {else}
 
 {if $errormessage}
@@ -64,7 +64,7 @@
 		<label class="control-label" for="servertype">{$LANG.sslservertype}</label>
 		<div class="controls">
 			<select name="servertype" id="servertype">
-				<option value="" selected>{$LANG.pleasechooseone}</option>
+				<option value="" selected/>{$LANG.pleasechooseone}</option>
 			{foreach from=$webservertypes key=webservertypeid item=webservertype}
 				<option value="{$webservertypeid}"{if $servertype eq $webservertypeid} selected="selected"{/if}>{$webservertype}</option>
 			{/foreach}
@@ -102,13 +102,13 @@
 	<div class="control-group">
 		<label class="control-label" for="firstname">{$LANG.clientareafirstname}</label>
 		<div class="controls">
-			<input type="text" name="firstname" id="firstname" value="{$firstname}">
+			<input type="text" name="firstname" id="firstname" value="{$firstname}"/>
 		</div>
 	</div>
 	<div class="control-group">
 		<label class="control-label" for="lastname">{$LANG.clientarealastname}</label>
 		<div class="controls">
-			<input type="text" name="lastname" id="lastname" value="{$lastname}">
+			<input type="text" name="lastname" id="lastname" value="{$lastname}"/>
 		</div>
 	</div>
 	<div class="control-group">
@@ -173,16 +173,16 @@
 	</div>
 
 	<div class="form-actions">
-		<input type="submit" value="{$LANG.ordercontinuebutton}" class="btn btn-primary">
+		<input type="submit" value="{$LANG.ordercontinuebutton}" class="btn btn-primary"/>
 	</div>
 </form>
 
 {else}
 
 <form method="post" action="clientarea.php">
-	<input type="hidden" name="action" value="productdetails">
-	<input type="hidden" name="id" value="{$serviceid}">
-	<input type="submit" value="{$LANG.invoicesbacktoclientarea}" class="btn">
+	<input type="hidden" name="action" value="productdetails"/>
+	<input type="hidden" name="id" value="{$serviceid}"/>
+	<input type="submit" value="{$LANG.invoicesbacktoclientarea}" class="btn"/>
  </form>
 
 {/if}

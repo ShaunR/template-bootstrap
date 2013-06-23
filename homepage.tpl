@@ -4,21 +4,18 @@
 	<p class="marginbottom">{$LANG.domaincheckerenterdomain}</p>
 	<div class="text-center">
 		<form method="post" action="domainchecker.php">
-			<input class="span7 marginbottom" style="font-size:1.4em;height:30px;" name="domain" type="text" value="" placeholder="{$LANG.domaincheckerdomainexample}">
+			<input class="span7 marginbottom" style="font-size:1.4em;height:30px;" name="domain" type="text" value="" placeholder="{$LANG.domaincheckerdomainexample}"/>
 	{if $capatacha}
 			<div class="borderradius text-center marginbottom" style="width:50%;margin-left:auto;margin-right:auto;border:1px dashed #cccccc;padding:10px;">
 				<p>{$LANG.captchaverify}</p>
-		{if $capatacha eq "recaptcha"}
-				<p>{$recapatchahtml}</p>
-		{else}
-				<img src="includes/verifyimage.php" alt="captcha"> <input type="text" name="code" class="span1" style="margin-bottom:0" maxlength="5">
-		{/if}
+		{if $capatacha eq "recaptcha"}<p>{$recapatchahtml}</p>
+		{else}<img src="includes/verifyimage.php" alt="captcha"/> <input type="text" name="code" class="span1" style="margin-bottom:0" maxlength="5"/>{/if}
 			</div>
 	{/if}
 			<div>
-				{if $condlinks.domainreg}<input type="submit" value="{$LANG.checkavailability}" class="btn btn-primary btn-large">{/if} 
-				{if $condlinks.domaintrans}<input type="submit" name="transfer" value="{$LANG.domainstransfer}" class="btn btn-success btn-large">{/if} 
-				{if $condlinks.domainown}<input type="submit" name="hosting" value="{$LANG.domaincheckerhostingonly}" class="btn btn-large">{/if} 
+				{if $condlinks.domainreg}<input type="submit" value="{$LANG.checkavailability}" class="btn btn-primary btn-large"/>{/if} 
+				{if $condlinks.domaintrans}<input type="submit" name="transfer" value="{$LANG.domainstransfer}" class="btn btn-success btn-large"/>{/if} 
+				{if $condlinks.domainown}<input type="submit" name="hosting" value="{$LANG.domaincheckerhostingonly}" class="btn btn-large"/>{/if} 
 			</div>
 		</form>
 	</div>
@@ -47,7 +44,7 @@
 <h2>{$LANG.twitterlatesttweets}</h2>
 </div>
 <div id="twitterfeed">
-	<p><img src="images/loading.gif"></p>
+	<p><img src="images/loading.gif"/></p>
 </div>
 {literal}
 <script language="javascript">
@@ -56,7 +53,5 @@
 {/literal}
 {elseif $announcements}
 <h2>{$LANG.latestannouncements}</h2>
-	{foreach from=$announcements item=announcement}
-<p>{$announcement.date} - <a href="{if $seofriendlyurls}announcements/{$announcement.id}/{$announcement.urlfriendlytitle}.html{else}announcements.php?id={$announcement.id}{/if}"><b>{$announcement.title}</b></a><br>{$announcement.text|strip_tags|truncate:100:"..."}</p>
-	{/foreach}
+	{foreach from=$announcements item=announcement}<p>{$announcement.date} - <a href="{if $seofriendlyurls}announcements/{$announcement.id}/{$announcement.urlfriendlytitle}.html{else}announcements.php?id={$announcement.id}{/if}"><b>{$announcement.title}</b></a><br/>{$announcement.text|strip_tags|truncate:100:"..."}</p>{/foreach}
 {/if}

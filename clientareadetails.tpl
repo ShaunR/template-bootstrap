@@ -38,31 +38,31 @@
 			 <div class="control-group">
 				 <label class="control-label" for="firstname">{$LANG.clientareafirstname}</label>
 				<div class="controls">
-					 <input type="text" name="firstname" id="firstname" class="span3" value="{$clientfirstname}"{if in_array('firstname',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
+					 <input type="text" name="firstname" id="firstname" class="span3" value="{$clientfirstname}"{if in_array('firstname',$uneditablefields)} disabled="disabled" class="disabled"{/if} />
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label" for="lastname">{$LANG.clientarealastname}</label>
 				<div class="controls">
-					<input type="text" name="lastname" id="lastname" class="span3" value="{$clientlastname}"{if in_array('lastname',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
+					<input type="text" name="lastname" id="lastname" class="span3" value="{$clientlastname}"{if in_array('lastname',$uneditablefields)} disabled="disabled" class="disabled"{/if} />
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label" for="companyname">{$LANG.clientareacompanyname}</label>
 				<div class="controls">
-					<input type="text" name="companyname" id="companyname" class="span3" value="{$clientcompanyname}"{if in_array('companyname',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
+					<input type="text" name="companyname" id="companyname" class="span3" value="{$clientcompanyname}"{if in_array('companyname',$uneditablefields)} disabled="disabled" class="disabled"{/if} />
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label" for="email">{$LANG.clientareaemail}</label>
 				<div class="controls">
-					<input type="text" name="email" id="email" class="span3" value="{$clientemail}"{if in_array('email',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
+					<input type="text" name="email" id="email" class="span3" value="{$clientemail}"{if in_array('email',$uneditablefields)} disabled="disabled" class="disabled"{/if} />
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label" for="phonenumber">{$LANG.clientareaphonenumber}</label>
 				<div class="controls">
-					<input type="text" name="phonenumber" id="phonenumber" class="span3" value="{$clientphonenumber}"{if in_array('phonenumber',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
+					<input type="text" name="phonenumber" id="phonenumber" class="span3" value="{$clientphonenumber}"{if in_array('phonenumber',$uneditablefields)} disabled="disabled" class="disabled"{/if} />
 				</div>
 			</div>
 			<div class="control-group">
@@ -92,31 +92,31 @@
 			<div class="control-group">
 				<label class="control-label" for="address1">{$LANG.clientareaaddress1}</label>
 				<div class="controls">
-					<input type="text" name="address1" id="address1" class="span3" value="{$clientaddress1}"{if in_array('address1',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
+					<input type="text" name="address1" id="address1" class="span3" value="{$clientaddress1}"{if in_array('address1',$uneditablefields)} disabled="disabled" class="disabled"{/if} />
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label" for="address2">{$LANG.clientareaaddress2}</label>
 				<div class="controls">
-					<input type="text" name="address2" id="address2" class="span3" value="{$clientaddress2}"{if in_array('address2',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
+					<input type="text" name="address2" id="address2" class="span3" value="{$clientaddress2}"{if in_array('address2',$uneditablefields)} disabled="disabled" class="disabled"{/if} />
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label" for="city">{$LANG.clientareacity}</label>
 				<div class="controls">
-					<input type="text" name="city" id="city" class="span3" value="{$clientcity}"{if in_array('city',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
+					<input type="text" name="city" id="city" class="span3" value="{$clientcity}"{if in_array('city',$uneditablefields)} disabled="disabled" class="disabled"{/if} />
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label" for="state">{$LANG.clientareastate}</label>
 				<div class="controls">
-					<input type="text" name="state" id="state" class="span3" value="{$clientstate}"{if in_array('state',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
+					<input type="text" name="state" id="state" class="span3" value="{$clientstate}"{if in_array('state',$uneditablefields)} disabled="disabled" class="disabled"{/if} />
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label" for="postcode">{$LANG.clientareapostcode}</label>
 				<div class="controls">
-					<input type="text" name="postcode" id="postcode" class="span3" value="{$clientpostcode}"{if in_array('postcode',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
+					<input type="text" name="postcode" id="postcode" class="span3" value="{$clientpostcode}"{if in_array('postcode',$uneditablefields)} disabled="disabled" class="disabled"{/if} />
 				</div>
 			</div>
 			<div class="control-group">
@@ -129,7 +129,7 @@
 				<label class="control-label" for="emailoptout">{$LANG.emailoptout}</label>
 				<div class="controls">
 					<label class="checkbox" for="emailoptout">
-						<input type="checkbox" value="1" name="emailoptout" id="emailoptout"{if $emailoptout} checked="checked"{/if}>
+						<input type="checkbox" value="1" name="emailoptout" id="emailoptout"{if $emailoptout} checked="checked"{/if}/>
 						{$LANG.emailoptoutdesc}
 					</label>
 				</div>
@@ -137,7 +137,7 @@
 		</div>
 	</div>
 {if $customfields}
-	<hr>
+	<hr/>
 	<div class="row">
 		<div class="span6">
 	{foreach from=$customfields key=num item=customfield}
@@ -152,7 +152,7 @@
 	</div>
 {/if}
 	<div class="form-actions">
-		<input class="btn btn-primary" type="submit" name="save" value="{$LANG.clientareasavechanges}">
+		<input class="btn btn-primary" type="submit" name="save" value="{$LANG.clientareasavechanges}"/>
 		<input class="btn" type="reset" value="{$LANG.cancel}">
 	</div>
 </form>

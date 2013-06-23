@@ -109,19 +109,19 @@
 				</div>
 				<div class="span8 text-center">
 					<form method="post" action="{$smarty.server.PHP_SELF}?action=domaindetails#tab-autorenew">
-						<input type="hidden" name="id" value="{$domainid}">
+						<input type="hidden" name="id" value="{$domainid}"/>
 					{if $autorenew}
 						<div class="alert alert-success alert-block text-center">
 							<h3 class="alert-heading">{$LANG.domainautorenewstatus}: {$LANG.domainsautorenewenabled}</h3>
 						</div>
-						<input type="hidden" name="autorenew" value="disable">
-						<input type="submit" class="btn btn-large btn-danger" value="{$LANG.domainsautorenewdisable}">
+						<input type="hidden" name="autorenew" value="disable"/>
+						<input type="submit" class="btn btn-large btn-danger" value="{$LANG.domainsautorenewdisable}"/>
 					{else}
 						<div class="alert alert-error alert-block text-center">
 							<h3 class="alert-heading">{$LANG.domainautorenewstatus}: {$LANG.domainsautorenewdisabled}</h3>
 						</div>
-						<input type="hidden" name="autorenew" value="enable">
-						<input type="submit" class="btn btn-large btn-success" value="{$LANG.domainsautorenewenable}">
+						<input type="hidden" name="autorenew" value="enable"/>
+						<input type="submit" class="btn btn-large btn-success" value="{$LANG.domainsautorenewenable}"/>
 					{/if}
 					</form>
 				</div>
@@ -135,11 +135,11 @@
 				</div>
 				<div class="span8">
 					<form method="post" action="{$smarty.server.PHP_SELF}?action=domaindetails">
-						<input type="hidden" name="id" value="{$domainid}">
-						<input type="hidden" name="sub" value="savens">
+						<input type="hidden" name="id" value="{$domainid}"/>
+						<input type="hidden" name="sub" value="savens"/>
 						<fieldset name="nschoises" class="marginbottom well">
-							<label class="radio"><input type="radio" name="nschoice" value="default"{if $defaultns} checked="checked"{/if}> {$LANG.nschoicedefault}</label>
-							<label class="radio"><input type="radio" name="nschoice" value="custom"{if !$defaultns} checked="checked"{/if}> {$LANG.nschoicecustom}</label>
+							<label class="radio"><input type="radio" name="nschoice" value="default"{if $defaultns} checked="checked"{/if}/> {$LANG.nschoicedefault}</label>
+							<label class="radio"><input type="radio" name="nschoice" value="custom"{if !$defaultns} checked="checked"{/if}/> {$LANG.nschoicecustom}</label>
 							<script type="text/javascript">
 								{literal}
 								$(function() {
@@ -156,17 +156,17 @@
 						</fieldset>
 						<fieldset name="nameservers">
 							<label for="ns1">{$LANG.domainnameserver1}</label>
-							<input class="span3 domnsinputs" id="ns1" name="ns1" type="text" value="{$ns1}">
+							<input class="span3 domnsinputs" id="ns1" name="ns1" type="text" value="{$ns1}"/>
 							<label for="ns2">{$LANG.domainnameserver2}</label>
-							<input class="span3 domnsinputs" id="ns2" name="ns2" type="text" value="{$ns2}">
+							<input class="span3 domnsinputs" id="ns2" name="ns2" type="text" value="{$ns2}"/>
 							<label for="ns3">{$LANG.domainnameserver3}</label>
-							<input class="span3 domnsinputs" id="ns3" name="ns3" type="text" value="{$ns3}">
+							<input class="span3 domnsinputs" id="ns3" name="ns3" type="text" value="{$ns3}"/>
 							<label for="ns4">{$LANG.domainnameserver4}</label>
-							<input class="span3 domnsinputs" id="ns4" name="ns4" type="text" value="{$ns4}">
+							<input class="span3 domnsinputs" id="ns4" name="ns4" type="text" value="{$ns4}"/>
 							<label for="ns5">{$LANG.domainnameserver5}</label>
-							<input class="span3 domnsinputs" id="ns5" name="ns5" type="text" value="{$ns5}">
+							<input class="span3 domnsinputs" id="ns5" name="ns5" type="text" value="{$ns5}"/>
 						</fieldset>
-						<input type="submit" class="btn btn-large btn-primary" value="{$LANG.changenameservers}">
+						<input type="submit" class="btn btn-large btn-primary" value="{$LANG.changenameservers}"/>
 					</form>
 				</div>
 			</div>
@@ -180,7 +180,7 @@
 				<div class="span8">
 				{if $addons.idprotection}
 					<div class="marginbottom">
-						<img src="images/idprotect.png" title="{$LANG.domainidprotection}" class="pull-left marginright">
+						<img src="images/idprotect.png" title="{$LANG.domainidprotection}" class="pull-left marginright"/>
 						<h4>{$LANG.domainidprotection}</h4>
 						<p class="nomarginbottom">{$LANG.domainaddonsidprotectioninfo}</p>
 						<div class="clearfix">
@@ -194,7 +194,7 @@
 				{/if}
 				{if $addons.dnsmanagement}
 					<div class="marginbottom">
-						<img src="images/dnsmanagement.png" title="{$LANG.domainaddonsdnsmanagement}" class="pull-left marginright">
+						<img src="images/dnsmanagement.png" title="{$LANG.domainaddonsdnsmanagement}" class="pull-left marginright"/>
 						<h4>{$LANG.domainaddonsdnsmanagement}</h4>
 						<p class="nomarginbottom">{$LANG.domainaddonsdnsmanagementinfo}</p>
 						<div class="clearfix">
@@ -208,7 +208,7 @@
 				{/if}
 				{if $addons.emailforwarding}
 					<div class="marginbottom">
-						<img src="images/emailfwd.png" title="{$LANG.domainemailforwarding}" class="pull-left marginright">
+						<img src="images/emailfwd.png" title="{$LANG.domainemailforwarding}" class="pull-left marginright"/>
 						<h4>{$LANG.domainemailforwarding}</h4>
 						<p class="nomarginbottom">{$LANG.domainaddonsemailforwardinginfo}</p>
 						<div class="clearfix">
@@ -231,18 +231,18 @@
 				</div>
 				<div class="span8 text-center">
                <form method="post" action="{$smarty.server.PHP_SELF}?action=domaindetails#tab-registrarlock">
-						<input type="hidden" name="id" value="{$domainid}">
-						<input type="hidden" name="sub" value="savereglock">
+						<input type="hidden" name="id" value="{$domainid}"/>
+						<input type="hidden" name="sub" value="savereglock"/>
                {if $lockstatus == "locked"}
                   <div class="alert alert-success alert-block text-center">
                      <h3 class="alert-heading">{$LANG.domainreglockstatus}: {$LANG.domainsautorenewenabled}</h3>
                   </div>
-						<input type="submit" class="btn btn-large btn-danger" value="{$LANG.domainreglockdisable}">
+						<input type="submit" class="btn btn-large btn-danger" value="{$LANG.domainreglockdisable}"/>
                {else}
                   <div class="alert alert-error alert-block text-center">
                      <h3 class="alert-heading">{$LANG.domainreglockstatus}: {$LANG.domainsautorenewdisabled}</h3>
                   </div>
-						<input type="submit" name="reglock" class="btn btn-large btn-success" value="{$LANG.domainreglockenable}">
+						<input type="submit" name="reglock" class="btn btn-large btn-success" value="{$LANG.domainreglockenable}"/>
                {/if}
                </form>
 				</div>
@@ -257,13 +257,13 @@
 				<div class="span8 text-center">
 					<form method="post" action="{$smarty.server.PHP_SELF}?action=domaindetails" class="form-inline">
 						<fieldset class="well">
-							<input type="hidden" name="sub" value="releasedomain">
-							<input type="hidden" name="id" value="{$domainid}">
+							<input type="hidden" name="sub" value="releasedomain"/>
+							<input type="hidden" name="id" value="{$domainid}"/>
 							<label for="releasetag">{$LANG.domainreleasetag}:</label> 
-							<input type="text" name="transtag" class="span2">
+							<input type="text" name="transtag" class="span2"/>
 							<span class="help-inline">{$LANG.domainreleasedescription}</span>
 						</fieldset>
-						<input type="submit" value="{$LANG.domainrelease}" class="btn btn-large btn-warning">
+						<input type="submit" value="{$LANG.domainrelease}" class="btn btn-large btn-warning"/>
 					</form>
 				</div>
 			</div>

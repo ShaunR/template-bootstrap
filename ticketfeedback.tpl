@@ -82,7 +82,7 @@
 </table>
 
 <form method="post" action="{$smarty.server.PHP_SELF}?tid={$tid}&c={$c}&feedback=1" class="form-inline">
-	<input type="hidden" name="validate" value="true">
+	<input type="hidden" name="validate" value="true"/>
 	{foreach from=$staffinvolved key=staffid item=staff}
 	<div class="well well-small">
 		<label>{$LANG.feedbackpleaserate1} <strong>{$staff}</strong> {$LANG.feedbackhandled}:</label>
@@ -101,8 +101,8 @@
 <textarea name="comments[generic]" rows="4" style="width:80%;">{$comments.generic}</textarea>
 
 <div class="form-actions">
-	<input class="btn btn-primary" type="submit" name="save" value="{$LANG.clientareasavechanges}">
-	<input class="btn" type="reset" value="{$LANG.cancel}">
+	<input class="btn btn-primary" type="submit" name="save" value="{$LANG.clientareasavechanges}"/>
+	<input class="btn" type="reset" value="{$LANG.cancel}"/>
 </div>
 
 </form>

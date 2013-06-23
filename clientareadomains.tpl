@@ -3,19 +3,19 @@
 </div>
 
 <form class="form-inline well well-small pull-right" action="clientarea.php" method="post">
-	<input type="hidden" name="action" value="products">
-	<input type="text" class="span3" name="q" value="{if $q}{$q}{/if}" placeholder="{$LANG.searchenterdomain}">
+	<input type="hidden" name="action" value="products"/>
+	<input type="text" class="span3" name="q" value="{if $q}{$q}{/if}" placeholder="{$LANG.searchenterdomain}"/>
 	<button type="submit" class="btn btn-success">{$LANG.searchfilter}</button>
 </form>
 
 <div style="padding-top:9px">{$numitems} {$LANG.recordsfound}, {$LANG.page} {$pagenumber} {$LANG.pageof} {$totalpages}</div>
 
 <form method="post" action="clientarea.php" class="clearfix">
-	<input type="hidden" name="action" value="bulkdomain">
+	<input type="hidden" name="action" value="bulkdomain"/>
 	<table class="table table-bordered-outside table-striped table-sorted">
 		<thead>
 			<tr>
-				<th class="text-center"><input type="checkbox" class="toggle-checkboxes" data-target=".domids"></th>
+				<th class="text-center"><input type="checkbox" class="toggle-checkboxes" data-target=".domids"/></th>
 				<th{if $orderby eq "domain"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=domains{if $q}&amp;q={$q}{/if}&amp;orderby=domain" title="{$LANG.clientareahostingdomain}">{$LANG.clientareahostingdomain}</a></th>
 				<th{if $orderby eq "regdate"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=domains{if $q}&amp;q={$q}{/if}&amp;orderby=regdate" title="{$LANG.clientareahostingregdate}">{$LANG.clientareahostingregdate}</a></th>
 				<th{if $orderby eq "nextduedate"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=domains{if $q}&amp;q={$q}{/if}&amp;orderby=nextduedate" title="{$LANG.clientareahostingnextduedate}">{$LANG.clientareahostingnextduedate}</a></th>
@@ -27,7 +27,7 @@
 		<tbody>
 {foreach key=num item=domain from=$domains}
 			<tr>
-				<td class="text-center"><input type="checkbox" name="domids[]" class="domids" value="{$domain.id}"></td>
+				<td class="text-center"><input type="checkbox" name="domids[]" class="domids" value="{$domain.id}"/></td>
 				<td><a href="http://{$domain.domain}/" target="_blank">{$domain.domain}</a></td>
 				<td>{$domain.registrationdate}</td>
 				<td>{$domain.nextduedate}</td>
@@ -45,11 +45,11 @@
 			<tr>
 				<td colspan="7">
 					{$LANG.domainbulkmanagement}:
-					<input type="submit" name="nameservers" value="{$LANG.domainmanagens}" class="btn btn-inverse btn-small">
-					<input type="submit" name="autorenew" value="{$LANG.domainautorenewstatus}" class="btn btn-inverse btn-small">
-					<input type="submit" name="reglock" value="{$LANG.domainreglockstatus}" class="btn btn-inverse btn-small">
-					<input type="submit" name="contactinfo" value="{$LANG.domaincontactinfoedit}" class="btn btn-inverse btn-small">
-					<input type="submit" name="renew" value="{$LANG.domainmassrenew}" class="btn btn-inverse btn-small">
+					<input type="submit" name="nameservers" value="{$LANG.domainmanagens}" class="btn btn-inverse btn-small"/>
+					<input type="submit" name="autorenew" value="{$LANG.domainautorenewstatus}" class="btn btn-inverse btn-small"/>
+					<input type="submit" name="reglock" value="{$LANG.domainreglockstatus}" class="btn btn-inverse btn-small"/>
+					<input type="submit" name="contactinfo" value="{$LANG.domaincontactinfoedit}" class="btn btn-inverse btn-small"/>
+					<input type="submit" name="renew" value="{$LANG.domainmassrenew}" class="btn btn-inverse btn-small"/>
 				</td>
 			</tr>
 		</tfoot>
@@ -58,7 +58,7 @@
 
 <form method="post" action="{$smarty.server.PHP_SELF}" class="pull-right">
 	<fieldset>
-		<input type="hidden" name="action" value="{$clientareaaction}"> 
+		<input type="hidden" name="action" value="{$clientareaaction}"/> 
 		<select name="itemlimit" onchange="submit()">
 			<option>{$LANG.resultsperpage}</option>
 			<option value="10"{if $itemlimit==10} selected="selected"{/if}>10</option>

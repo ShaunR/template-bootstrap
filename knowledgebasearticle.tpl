@@ -1,6 +1,6 @@
 <p class="breadcrumb">{$breadcrumbnav}</p>
 <div class="pull-right margintop">
-	<img src="images/addtofavouritesicon.gif" class="valignbaseline" alt="{$LANG.knowledgebasefavorites}"> <a href="#" onClick="addBookmark();return false">{$LANG.knowledgebasefavorites}</a> &nbsp;&nbsp; <img src="images/print.gif" class="valignbaseline" alt="{$LANG.knowledgebaseprint}"> <a href="#" onclick="window.print();return false">{$LANG.knowledgebaseprint}</a>
+	<img src="images/addtofavouritesicon.gif" class="valignbaseline" alt="{$LANG.knowledgebasefavorites}"/> <a href="#" onClick="addBookmark();return false">{$LANG.knowledgebasefavorites}</a> &nbsp;&nbsp; <img src="images/print.gif" class="valignbaseline" alt="{$LANG.knowledgebaseprint}"/> <a href="#" onclick="window.print();return false">{$LANG.knowledgebaseprint}</a>
 </div>
 
 <div class="page-header">
@@ -36,7 +36,7 @@ function addBookmark() {
 			<option value="yes">{$LANG.knowledgebaseyes}</option>
 			<option value="no">{$LANG.knowledgebaseno}</option>
 		</select>
-		<input type="submit" value="{$LANG.knowledgebasevote}" class="btn btn-primary">
+		<input type="submit" value="{$LANG.knowledgebasevote}" class="btn btn-primary"/>
 	{/if}
 </form>
 
@@ -45,7 +45,7 @@ function addBookmark() {
 <ul class="unstyled">
 {foreach key=num item=kbarticle from=$kbarticles}
 	<li>
-		<h4><img src="images/article.gif" alt="Article Icon"> <a href="{if $seofriendlyurls}knowledgebase/{$kbarticle.id}/{$kbarticle.urlfriendlytitle}.html{else}knowledgebase.php?action=displayarticle&amp;id={$kbarticle.id}{/if}">{$kbarticle.title}</a> <small>({$LANG.knowledgebaseviews}: {$kbarticle.views})</small></h4>
+		<h4><img src="images/article.gif" alt="Article Icon"/> <a href="{if $seofriendlyurls}knowledgebase/{$kbarticle.id}/{$kbarticle.urlfriendlytitle}.html{else}knowledgebase.php?action=displayarticle&amp;id={$kbarticle.id}{/if}">{$kbarticle.title}</a> <small>({$LANG.knowledgebaseviews}: {$kbarticle.views})</small></h4>
 	</li>
 {/foreach}
 </ul>

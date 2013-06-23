@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 	<html lang="en">
 		<head>
-			<meta http-equiv="content-type" content="text/html; charset={$charset}">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta http-equiv="content-type" content="text/html; charset={$charset}"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 			<title>{if $kbarticle.title}{$kbarticle.title} - {/if}{$pagetitle} - {$companyname}</title>
-			{if $systemurl}<base href="{$systemurl}">{/if}
+			{if $systemurl}<base href="{$systemurl}"/>{/if}
 	
 			<script type="text/javascript" src="templates/{$template}/assets/jquery/js/jquery-1.9.1.min.js"></script>
 	
 			<script type="text/javascript" src="templates/{$template}/assets/bootstrap/js/bootstrap.min.js"></script>
-			<link href="templates/{$template}/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-			<link href="templates/{$template}/assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+			<link href="templates/{$template}/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+			<link href="templates/{$template}/assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"/>
 	
 			<script src="templates/{$template}/assets/whmcs/js/whmcs.js"></script>
-			<link href="templates/{$template}/assets/whmcs/css/whmcs.css" rel="stylesheet">
+			<link href="templates/{$template}/assets/whmcs/css/whmcs.css" rel="stylesheet"/>
 	
 			{if $livehelpjs}{$livehelpjs}{/if}
 			
@@ -25,7 +25,7 @@
 
 			<div id="whmcsheader" class="container">
 				<div>
-					<img src="templates/{$template}/assets/whmcs/img/whmcslogo.png" alt="{$companyname}">
+					<img src="templates/{$template}/assets/whmcs/img/whmcslogo.png" alt="{$companyname}"/>
 				</div>
 			</div>
 

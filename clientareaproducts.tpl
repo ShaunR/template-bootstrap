@@ -3,8 +3,8 @@
 </div>
 
 <form class="form-inline well well-small pull-right" action="clientarea.php" method="post">
-	<input type="hidden" name="action" value="products">
-	<input type="text" class="span3" name="q" value="{if $q}{$q}{/if}" placeholder="{$LANG.searchenterdomain}">
+	<input type="hidden" name="action" value="products"/>
+	<input type="text" class="span3" name="q" value="{if $q}{$q}{/if}" placeholder="{$LANG.searchenterdomain}"/>
 	<button type="submit" class="btn btn-success">{$LANG.searchfilter}</button>
 </form>
 
@@ -24,7 +24,7 @@
 	<tbody>
 {foreach from=$services item=service}
 		<tr>
-			<td>{$service.group} - {$service.product}{if $service.domain}<br ><a href="http://{$service.domain}" target="_blank">{$service.domain}</a>{/if}</td>
+			<td>{$service.group} - {$service.product}{if $service.domain}<br /><a href="http://{$service.domain}" target="_blank">{$service.domain}</a>{/if}</td>
 			<td>{$service.amount}</td>
 			<td>{$service.billingcycle}</td>
 			<td>{$service.nextduedate}</td>

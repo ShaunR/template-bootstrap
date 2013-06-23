@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>{$companyname} - {$id}</title>
-<link rel="stylesheet" type="text/css" href="templates/{$template}/css/quote.css">
+<link rel="stylesheet" type="text/css" href="templates/{$template}/css/quote.css"/>
 <link href="includes/jscript/css/ui.all.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="includes/jscript/jquery.js"></script>
 <script type="text/javascript" src="includes/jscript/jqueryui.js"></script>
@@ -31,7 +31,7 @@ $("#quoteaccept").dialog({
 
 <table width="100%"><tr><td width="50%">
 
-{if $logo}<p><img src="{$logo}"></p>{else}<h1>{$companyname}</h1>{/if}
+{if $logo}<p><img src="{$logo}"/></p>{else}<h1>{$companyname}</h1>{/if}
 
 </td><td width="50%" align="center">
 
@@ -39,17 +39,12 @@ $("#quoteaccept").dialog({
 <font class="unpaid">{$LANG.quotestagedelivered}</font><br />
 <form style="display:inline"><input type="button" value="{$LANG.quoteacceptbtn}" {if $accepttos}onclick="$('#quoteaccept').dialog('open')"{else}onclick="location.href='viewquote.php?id={$quoteid}&action=accept'" {/if} /></form>
 <form style="display:inline" method="post" action="dl.php?type=q&amp;id={$quoteid}"><input type="submit" value="{$LANG.quotedlpdfbtn}" /></form>
-{elseif $stage eq "Accepted"}
-<font class="paid">{$LANG.quotestageaccepted}</font><br />
-{elseif $stage eq "On Hold"}
-<font class="refunded">{$LANG.quotestageonhold}</font>
+{elseif $stage eq "Accepted"}<font class="paid">{$LANG.quotestageaccepted}</font><br />
+{elseif $stage eq "On Hold"}<font class="refunded">{$LANG.quotestageonhold}</font>
 <form style="display:inline"><input type="button" value="{$LANG.quoteacceptbtn}" {if $accepttos}onclick="$('#quoteaccept').dialog('open')"{else}onclick="location.href='viewquote.php?id={$quoteid}&action=accept'" {/if} /></form>
 <form style="display:inline" method="post" action="dl.php?type=q&amp;id={$quoteid}"><input type="submit" value="{$LANG.quotedlpdfbtn}" /></form>
-{elseif $stage eq "Lost"}
-<font class="cancelled">{$LANG.quotestagelost}</font>
-{elseif $stage eq "Dead"}
-<font class="collections">{$LANG.quotestagedead}</font>
-{/if}
+{elseif $stage eq "Lost"}<font class="cancelled">{$LANG.quotestagelost}</font>
+{elseif $stage eq "Dead"}<font class="collections">{$LANG.quotestagedead}</font>{/if}
 
 </td></tr></table>
 

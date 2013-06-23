@@ -18,8 +18,8 @@
 		{if $type eq "package"}
 		<tr>
 			<td>
-				<input type="hidden" name="pid" value="{$upgrade.newproductid}">
-				<input type="hidden" name="billingcycle" value="{$upgrade.newproductbillingcycle}">
+				<input type="hidden" name="pid" value="{$upgrade.newproductid}"/>
+				<input type="hidden" name="billingcycle" value="{$upgrade.newproductbillingcycle}"/>
 				{$upgrade.oldproductname} <i class="icon icon-arrow-right"></i> {$upgrade.newproductname}
 			</td>
 			<td>{$upgrade.price}</td>
@@ -76,44 +76,37 @@
 {/if}
 
 <form method="post" action="upgrade.php" class="form-inline text-center well well-small">
-	<input type="hidden" name="step" value="2">
-	<input type="hidden" name="type" value="{$type}">
-	<input type="hidden" name="id" value="{$id}">
+	<input type="hidden" name="step" value="2"/>
+	<input type="hidden" name="type" value="{$type}"/>
+	<input type="hidden" name="id" value="{$id}"/>
 	{if $type eq "package"}
-	<input type="hidden" name="pid" value="{$upgrades.0.newproductid}">
-	<input type="hidden" name="billingcycle" value="{$upgrades.0.newproductbillingcycle}">
+	<input type="hidden" name="pid" value="{$upgrades.0.newproductid}"/>
+	<input type="hidden" name="billingcycle" value="{$upgrades.0.newproductbillingcycle}"/>
 	{/if}
-	{foreach from=$configoptions key=cid item=value}
-	<input type="hidden" name="configoption[{$cid}]" value="{$value}">
-	{/foreach}
+	{foreach from=$configoptions key=cid item=value}<input type="hidden" name="configoption[{$cid}]" value="{$value}"/>{/foreach}
 	{$LANG.orderpromotioncode}: 
-	{if $promocode}
-		{$promocode} - {$promodesc} <input type="submit" name="removepromo" value="{$LANG.orderdontusepromo}" class="btn btn-danger">
-	{else}
-		<input type="text" name="promocode" class="span3"> <input type="submit" value="{$LANG.orderpromovalidatebutton}" class="btn btn-success">
-	{/if}
+	{if $promocode}{$promocode} - {$promodesc} <input type="submit" name="removepromo" value="{$LANG.orderdontusepromo}" class="btn btn-danger"/>
+	{else}<input type="text" name="promocode" class="span3"/> <input type="submit" value="{$LANG.orderpromovalidatebutton}" class="btn btn-success"/>{/if}
 </form>
 
 <form method="post" action="upgrade.php">
-	<input type="hidden" name="step" value="3">
-	<input type="hidden" name="type" value="{$type}">
-	<input type="hidden" name="id" value="{$id}">
+	<input type="hidden" name="step" value="3"/>
+	<input type="hidden" name="type" value="{$type}"/>
+	<input type="hidden" name="id" value="{$id}"/>
 	{if $type eq "package"}
-	<input type="hidden" name="pid" value="{$upgrades.0.newproductid}">
-	<input type="hidden" name="billingcycle" value="{$upgrades.0.newproductbillingcycle}">
+	<input type="hidden" name="pid" value="{$upgrades.0.newproductid}"/>
+	<input type="hidden" name="billingcycle" value="{$upgrades.0.newproductbillingcycle}"/>
 	{/if}
-	{foreach from=$configoptions key=cid item=value}
-	<input type="hidden" name="configoption[{$cid}]" value="{$value}">
-	{/foreach}
-	{if $promocode}<input type="hidden" name="promocode" value="{$promocode}">{/if}
+	{foreach from=$configoptions key=cid item=value}<input type="hidden" name="configoption[{$cid}]" value="{$value}"/>{/foreach}
+	{if $promocode}<input type="hidden" name="promocode" value="{$promocode}"/>{/if}
 	<div class="page-header">
 		<h2>{$LANG.orderpaymentmethod}</h2>
 	</div>
 	{foreach key=num item=gateway from=$gateways}
-	<label class="radio"><input type="radio" name="paymentmethod" value="{$gateway.sysname}" {if $selectedgateway eq $gateway.sysname} checked="checked"{/if}> {$gateway.name} </label>
+	<label class="radio"><input type="radio" name="paymentmethod" value="{$gateway.sysname}" {if $selectedgateway eq $gateway.sysname} checked="checked"{/if}/> {$gateway.name} </label>
 	{/foreach}
 
 	<div class="text-center">
-		<input type="submit" value="{$LANG.ordercontinuebutton}" class="btn btn-primary btn-large">
+		<input type="submit" value="{$LANG.ordercontinuebutton}" class="btn btn-primary btn-large"/>
 	</div>
 </form>

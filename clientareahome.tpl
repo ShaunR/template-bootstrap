@@ -4,11 +4,11 @@
 			<h2>{$LANG.accountinfo} <a href="clientarea.php?action=details" rel="tooltip" data-placement="right" title="{$LANG.clientareaupdateyourdetails}"><i class="icon icon-edit"></i></a></h2>
 		</div>
 		<address>
-			<strong>{$clientsdetails.firstname} {$clientsdetails.lastname} {if $clientsdetails.companyname}({$clientsdetails.companyname}){/if}</strong><br>
-			{$clientsdetails.address1}{if $clientsdetails.address2}, {$clientsdetails.address2}{/if}<br>
-			{if $clientsdetails.city}{$clientsdetails.city}, {/if}{if $clientsdetails.state}{$clientsdetails.state}, {/if}{$clientsdetails.postcode}<br>
-			{$clientsdetails.countryname}<br>
-			<a href="mailto:{$clientsdetails.email}">{$clientsdetails.email}</a><br>
+			<strong>{$clientsdetails.firstname} {$clientsdetails.lastname} {if $clientsdetails.companyname}({$clientsdetails.companyname}){/if}</strong><br/>
+			{$clientsdetails.address1}{if $clientsdetails.address2}, {$clientsdetails.address2}{/if}<br/>
+			{if $clientsdetails.city}{$clientsdetails.city}, {/if}{if $clientsdetails.state}{$clientsdetails.state}, {/if}{$clientsdetails.postcode}<br/>
+			{$clientsdetails.countryname}<br/>
+			<a href="mailto:{$clientsdetails.email}">{$clientsdetails.email}</a><br/>
 		</address>
 			
 	</div>
@@ -59,11 +59,11 @@
 <div class="well text-center">
 	<h3>{$LANG.domaincheckerchecknewdomain}</h3>
 	<form method="post" action="domainchecker.php">
-		<input class="span7" style="font-size:1.4em;height:30px;" name="domain" type="text" value="" placeholder="{$LANG.domaincheckerdomainexample}">
+		<input class="span7" style="font-size:1.4em;height:30px;" name="domain" type="text" value="" placeholder="{$LANG.domaincheckerdomainexample}"/>
 		<div>
-			{if $condlinks.domainreg}<input type="submit" value="{$LANG.checkavailability}" class="btn btn-primary btn-large">{/if} 
-			{if $condlinks.domaintrans}<input type="submit" name="transfer" value="{$LANG.domainstransfer}" class="btn btn-success btn-large">{/if} 
-			{if $condlinks.domainown}<input type="submit" name="hosting" value="{$LANG.domaincheckerhostingonly}" class="btn btn-large">{/if}
+			{if $condlinks.domainreg}<input type="submit" value="{$LANG.checkavailability}" class="btn btn-primary btn-large"/>{/if} 
+			{if $condlinks.domaintrans}<input type="submit" name="transfer" value="{$LANG.domainstransfer}" class="btn btn-success btn-large"/>{/if} 
+			{if $condlinks.domainown}<input type="submit" name="hosting" value="{$LANG.domaincheckerhostingonly}" class="btn btn-large"/>{/if}
 		</div>
 	</form>
 </div>
@@ -113,7 +113,7 @@
 	<table class="table table-striped table-bordered-outside table-sorted">
 		<thead>
 			<tr>
-				{if $masspay}<th class="text-center"><input type="checkbox" onclick="toggleCheckboxes('invids')"></th>{/if}
+				{if $masspay}<th class="text-center"><input type="checkbox" onclick="toggleCheckboxes('invids')"/></th>{/if}
 				<th class="sort-desc"><a href="clientarea.php?action=invoices&orderby=id">{$LANG.invoicestitle}</a></th>
 				<th><a href="clientarea.php?action=invoices&orderby=date">{$LANG.invoicesdatecreated}</a></th>
 				<th><a href="clientarea.php?action=invoices&orderby=duedate">{$LANG.invoicesdatedue}</a></th>
@@ -126,14 +126,14 @@
 		<tbody>
 	{foreach from=$invoices item=invoice}
 			<tr>
-				{if $masspay}<td class="text-center"><input type="checkbox" name="invoiceids[]" value="{$invoice.id}" class="invids"></td>{/if}
+				{if $masspay}<td class="text-center"><input type="checkbox" name="invoiceids[]" value="{$invoice.id}" class="invids"/></td>{/if}
 				<td><a href="viewinvoice.php?id={$invoice.id}" target="_blank">{$invoice.invoicenum}</a></td>
 				<td>{$invoice.datecreated}</td>
 				<td>{$invoice.datedue}</td>
 				<td>{$invoice.total}</td>
 				<td><span class="label label-{$invoice.rawstatus}">{$invoice.statustext}</span></td>
 				<td>{$invoice.balance}</td>
-				<td class="text-center"><input type="button" class="btn btn-info" value="{$LANG.invoicesview}" onclick="window.open('viewinvoice.php?id={$invoice.id}')"></td>
+				<td class="text-center"><input type="button" class="btn btn-info" value="{$LANG.invoicesview}" onclick="window.open('viewinvoice.php?id={$invoice.id}')"/></td>
 			</tr>
 	{foreachelse}
 			<tr>
@@ -144,7 +144,7 @@
 		<tfoot>
 	{if $invoices}
 			<tr>
-				<td colspan="{if $masspay}4{else}3{/if}">{if $masspay}<input type="submit" value="{$LANG.masspayselected}" class="btn"> <input type="button" value="{$LANG.masspayall}" onclick="window.location='clientarea.php?action=masspay&all=true'" class="btn btn-primary">{/if}</td>
+				<td colspan="{if $masspay}4{else}3{/if}">{if $masspay}<input type="submit" value="{$LANG.masspayselected}" class="btn"/> <input type="button" value="{$LANG.masspayall}" onclick="window.location='clientarea.php?action=masspay&all=true'" class="btn btn-primary"/>{/if}</td>
 				<td class="text-right">{$LANG.invoicestotaldue}</td>
 				<td>{$totalbalance}</td>
 				<td colspan="2">&nbsp;</td>
@@ -155,16 +155,14 @@
 </form>
 {/if}
 
-
 {if $files}
 <h3>{$LANG.clientareafiles}</h3>
 <ul class="thumbnails">
 {foreach from=$files item=file}
 	<li class="span3">
-		<h4><img src="images/file.png" class="valignbaseline" alt="File Icon"> <a href="dl.php?type=f&id={$file.id}"><strong>{$file.title}</strong></a></h4>
+		<h4><img src="images/file.png" class="valignbaseline" alt="File Icon"/> <a href="dl.php?type=f&id={$file.id}"><strong>{$file.title}</strong></a></h4>
 		{$LANG.clientareafilesdate}: {$file.date}
 	</li>
 {/foreach}
 </ul>
 {/if}
-

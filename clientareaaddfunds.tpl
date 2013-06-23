@@ -35,7 +35,7 @@
 			<div class="control-group">
 				<label class="control-label" for="amount">{$LANG.addfundsamount}:</label>
 				<div class="controls">
-					<input type="text" name="amount" id="amount" value="{$amount}" class="span1">
+					<input type="text" name="amount" id="amount" value="{$amount}" class="span1"/>
 				</div>
 			</div>
 			<div class="control-group">

@@ -21,7 +21,7 @@
 
 <div class="well text-center">
 	<form method="post" action="domainchecker.php">
-		<input type="hidden" name="search" value="bulk">
+		<input type="hidden" name="search" value="bulk"/>
 		<p>{$LANG.domainbulksearchintro}</p>
 		<div class="text-center">
 			<textarea name="bulkdomains" rows="8" class="span8">{$bulkdomains}</textarea>
@@ -31,11 +31,11 @@
 		{if $capatacha eq "recaptcha"}
 			<p>{$recapatchahtml}</p>
 		{else}
-			<img src="includes/verifyimage.php" alt="captcha"> <input type="text" name="code" class="span1" style="margin-bottom:0" maxlength="5">
+			<img src="includes/verifyimage.php" alt="captcha"/> <input type="text" name="code" class="span1" style="margin-bottom:0" maxlength="5"/>
 		{/if}
-		<hr>
+		<hr/>
 	{/if}
-		<input type="submit" value="{$LANG.checkavailability}" class="btn btn-primary btn-large" onclick="$('#modalpleasewait').modal();">
+		<input type="submit" value="{$LANG.checkavailability}" class="btn btn-primary btn-large" onclick="$('#modalpleasewait').modal();"/>
 	</form>
 </div>
 
@@ -49,16 +49,16 @@
 <div class="row">
 	<div class="span10 offset1">
 		<form method="post" action="{$systemsslurl}cart.php" class="form-horizontal">
-			<input type="hidden" name="a" value="add">
-			<input type="hidden" name="domain" value="register">
+			<input type="hidden" name="a" value="add"/>
+			<input type="hidden" name="domain" value="register"/>
 			<table class="table table-striped table-bordered">
 				<tbody>
 				{foreach from=$availabilityresults key=num item=result}
 					<tr>
 						<td class="text-center">
 						{if $result.status eq "available"}
-							<input type="checkbox" name="domains[]" value="{$result.domain}"{if $num eq "0" && $available} checked="checked"{/if}>
-							<input type="hidden" name="domainsregperiod[{$result.domain}]" value="{$result.period}">
+							<input type="checkbox" name="domains[]" value="{$result.domain}"{if $num eq "0" && $available} checked="checked"{/if}/>
+							<input type="hidden" name="domainsregperiod[{$result.domain}]" value="{$result.period}"/>
 						{else}
 							&times;
 						{/if}
@@ -145,14 +145,14 @@
 
 <div class="modal hide fade in" id="modalpleasewait">
 	<div class="modal-header text-center">
-		<h3><img src="images/loadingsml.gif" alt="{$LANG.pleasewait}" class="valignbaseline"> {$LANG.pleasewait}</h3>
+		<h3><img src="images/loadingsml.gif" alt="{$LANG.pleasewait}" class="valignbaseline"/> {$LANG.pleasewait}</h3>
 	</div>
 </div>
 
 <div class="modal hide fade in" id="modalwhois">
 	<div class="modal-header">
 		<button class="close" data-dismiss="modal">&times;</button>
-		<h3>{$LANG.whoisresults} <span><img src="images/loadingsml.gif" alt="{$LANG.pleasewait}" class="valignbaseline"></span></h3>
+		<h3>{$LANG.whoisresults} <span><img src="images/loadingsml.gif" alt="{$LANG.pleasewait}" class="valignbaseline"/></span></h3>
 	</div>
 	<div class="modal-body"></div>
 	<div class="modal-footer">
@@ -170,4 +170,3 @@
 	}
 {/literal}
 </script>
-

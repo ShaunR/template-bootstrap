@@ -14,12 +14,12 @@
 				<form method="post" action="{$systemsslurl}dologin.php" class="form-stacked" name="frmlogin">
 					<fieldset>
 						<label for="username">{$LANG.loginemail}:</label>
-						<input class="span4" name="username" id="username" type="text">
+						<input class="span4" name="username" id="username" type="text"/>
 						<label for="password">{$LANG.loginpassword}:</label>
-						<input class="span4" name="password" id="password" type="password">
+						<input class="span4" name="password" id="password" type="password"/>
 						<div class="text-center">
-							<input type="submit" class="btn btn-primary" value="{$LANG.loginbutton}">
-							<label class="checkbox inline" style="margin-left:15px;"><input type="checkbox" name="rememberme"{if $rememberme} checked="checked"{/if}> {$LANG.loginrememberme}</label>
+							<input type="submit" class="btn btn-primary" value="{$LANG.loginbutton}"/>
+							<label class="checkbox inline" style="margin-left:15px;"><input type="checkbox" name="rememberme"{if $rememberme} checked="checked"{/if}/> {$LANG.loginrememberme}</label>
 						</div>
 						<div class="text-center" style="margin-top:15px;">
 							<a href="pwreset.php">{$LANG.loginforgotteninstructions}</a>

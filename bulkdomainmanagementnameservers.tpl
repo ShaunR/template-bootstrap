@@ -26,15 +26,15 @@
 </div>
 
 <form method="post" action="clientarea.php" class="form-horizontal">
-	<input type="hidden" name="action" value="bulkdomain">
-	<input type="hidden" name="update" value="nameservers">
-	<input type="hidden" name="save" value="1">
+	<input type="hidden" name="action" value="bulkdomain"/>
+	<input type="hidden" name="update" value="nameservers"/>
+	<input type="hidden" name="save" value="1"/>
 	{foreach from=$domainids item=domainid}
-	<input type="hidden" name="domids[]" value="{$domainid}">
+	<input type="hidden" name="domids[]" value="{$domainid}"/>
 	{/foreach}
 	<fieldset name="nschoises" class="marginbottom well">
-		<label class="radio"><input type="radio" name="nschoice" value="default"{if $defaultns} checked="checked"{/if}> {$LANG.nschoicedefault}</label>
-		<label class="radio"><input type="radio" name="nschoice" value="custom"{if !$defaultns} checked="checked"{/if}> {$LANG.nschoicecustom}</label>
+		<label class="radio"><input type="radio" name="nschoice" value="default"{if $defaultns} checked="checked"{/if}/> {$LANG.nschoicedefault}</label>
+		<label class="radio"><input type="radio" name="nschoice" value="custom"{if !$defaultns} checked="checked"{/if}/> {$LANG.nschoicecustom}</label>
 		<script type="text/javascript">
 		{literal}
 			$(function() {
@@ -53,41 +53,41 @@
 		<div class="control-group">
 			<label class="control-label" for="ns1">{$LANG.domainnameserver1}</label>
 			<div class="controls">
-				<input class="span3 domnsinputs" id="ns1" name="ns1" type="text" value="{$ns1}">
+				<input class="span3 domnsinputs" id="ns1" name="ns1" type="text" value="{$ns1}"/>
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="ns2">{$LANG.domainnameserver2}</label>
 			<div class="controls">
-				<input class="span3 domnsinputs" id="ns2" name="ns2" type="text" value="{$ns2}">
+				<input class="span3 domnsinputs" id="ns2" name="ns2" type="text" value="{$ns2}"/>
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="ns3">{$LANG.domainnameserver3}</label>
 			<div class="controls">
-				<input class="span3 domnsinputs" id="ns3" name="ns3" type="text" value="{$ns3}">
+				<input class="span3 domnsinputs" id="ns3" name="ns3" type="text" value="{$ns3}"/>
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="ns4">{$LANG.domainnameserver4}</label>
 			<div class="controls">
-				<input class="span3 domnsinputs" id="ns4" name="ns4" type="text" value="{$ns4}">
+				<input class="span3 domnsinputs" id="ns4" name="ns4" type="text" value="{$ns4}"/>
 			</div>
 		</div>
 		<div class="control-group">			
 			<label class="control-label" for="ns5">{$LANG.domainnameserver5}</label>
 			<div class="controls">
-				<input class="span3 domnsinputs" id="ns5" name="ns5" type="text" value="{$ns5}">
+				<input class="span3 domnsinputs" id="ns5" name="ns5" type="text" value="{$ns5}"/>
 			</div>
 		</div>
 	</fieldset>
 	<div class="form-actions">
-		<input type="submit" class="btn btn-large btn-primary" onclick="$('#modalpleasewait').modal();" value="{$LANG.changenameservers}">
+		<input type="submit" class="btn btn-large btn-primary" onclick="$('#modalpleasewait').modal();" value="{$LANG.changenameservers}"/>
 	</div>
 </form>
 
 <div class="modal hide fade in" id="modalpleasewait">
 	<div class="modal-header text-center">
-		<h3><img src="images/loadingsml.gif" alt="{$LANG.pleasewait}" class="valignbaseline"> {$LANG.pleasewait}</h3>
+		<h3><img src="images/loadingsml.gif" alt="{$LANG.pleasewait}" class="valignbaseline"/> {$LANG.pleasewait}</h3>
 	</div>
 </div>
