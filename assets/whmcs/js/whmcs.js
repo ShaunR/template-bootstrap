@@ -24,13 +24,12 @@ $(function(){
 
 	// toggle checkboxes
 	$('#toggler').change( function() {
-		var target = this.checked;
-		if (target == true)
+		if (this.checked == true)
 		{$('.invids').prop('checked','checked').attr('checked','checked');}
 		else
 		{$('.invids').removeAttr('checked');}
 	});
-
+	
 	// Language Selector Styling fix
 	$('#languagefrm').addClass('form-inline');
 });
