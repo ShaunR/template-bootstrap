@@ -54,6 +54,10 @@
 </div>
 {/if}
 
+<div style="background:#0064CD;background:-moz-linear-gradient(top, #0064CD 0%, #207ce5 100%);background:-webkit-linear-gradient(top, #0064CD 0%,#207ce5 100%);background:-ms-linear-gradient(top, #0064CD 0%,#207ce5 100%);background:linear-gradient(to bottom, #0064CD 0%,#207ce5 100%);border:1px solid #0972E2;color:#FFF;font-family:Trebuchet MS, Trebuchet MS, sans-serif;font-size:18px;text-align:center;margin:24px 0;padding:14px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 5px 5px -3px rgba(0,0,0,0.3);-moz-box-shadow:0 5px 5px -3px rgba(0,0,0,0.3);box-shadow:0 5px 5px -3px rgba(0,0,0,0.3);zoom:1;">
+  The next generation of domains is coming! Take advantage of New TLD opportunities. <a href="/index.php?m=newtlds" style="color:#FFD20A">Learn More &raquo;</a>
+</div>
+
 {if $condlinks.domainreg || $condlinks.domaintrans || $condlinks.domainown}
 <div class="well text-center">
 	<h3>{$LANG.domaincheckerchecknewdomain}</h3>
