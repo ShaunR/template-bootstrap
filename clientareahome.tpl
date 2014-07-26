@@ -119,7 +119,7 @@
 		<table class="table table-striped table-sorted">
 			<thead>
 				<tr>
-					{if $masspay}<th class="text-center"><input type="checkbox" onclick="toggleCheckboxes('invids')"></th>{/if}
+					{if $masspay}<th class="text-center"><input type="checkbox" id="toggler"></th>{/if}
 					<th class="sort-desc"><a href="clientarea.php?action=invoices&amp;orderby=id">{$LANG.invoicestitle}</a></th>
 					<th><a href="clientarea.php?action=invoices&amp;orderby=date">{$LANG.invoicesdatecreated}</a></th>
 					<th><a href="clientarea.php?action=invoices&amp;orderby=duedate">{$LANG.invoicesdatedue}</a></th>
