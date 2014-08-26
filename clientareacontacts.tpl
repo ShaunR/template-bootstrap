@@ -316,7 +316,7 @@
 		<div class="col-md-10 col-md-offset-2">
 			<button type="submit" name="submit" value="{$LANG.clientareasavechanges}" class="btn btn-primary">{$LANG.clientareasavechanges}</button>
 			<input class="btn btn-default" type="reset" value="{$LANG.cancel}">
-			<a href="clientarea.php?action=contacts&amp;delete=true&amp;id={$contactid}" title="{$LANG.clientareadeletecontact}" class="btn btn-danger" onclick="return confirm('{$LANG.clientareadeletecontactareyousure}')">{$LANG.clientareadeletecontact}</a>
+			<a href="clientarea.php?action=contacts&amp;delete=true&amp;id={$contactid}&amp;token={$token}" title="{$LANG.clientareadeletecontact}" class="btn btn-danger" onclick="return confirm('{$LANG.clientareadeletecontactareyousure}')">{$LANG.clientareadeletecontact}</a>
 		</div>
 	</div>
 </form>

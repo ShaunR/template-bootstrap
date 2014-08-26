@@ -16,6 +16,15 @@
 	<a href="clientarea.php?action=productdetails&id={$id}" class="btn btn-primary">{$LANG.clientareabacklink}</a>
 </p>
 
+{elseif $existingupgradeinvoice}
+
+<div class="alert alert-danger">{$LANG.upgradeexistingupgradeinvoice}</div>
+
+<div class="text-center">
+	<a href="clientarea.php?action=productdetails&amp;id={$id}" title="{$LANG.clientareabacklink}" class="btn btn-default">{$LANG.clientareabacklink}</a>
+	<a href="submitticket.php" title="{$LANG.submitticketdescription}" class="btn btn-primary">{$LANG.submitticketdescription}</a>
+</div>
+
 {else}
 
 {if $type eq "package"}
