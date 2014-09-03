@@ -1,4 +1,5 @@
-<p class="breadcrumb">{$breadcrumbnav}</p>
+
+<p class="margin-top breadcrumb">{$breadcrumbnav}</p>
 
 <div class="pull-right">
 	<img src="images/addtofavouritesicon.gif" style="vertical-align:baseline" alt="{$LANG.knowledgebasefavorites}"> <a href="#" onClick="addBookmark();return false">{$LANG.knowledgebasefavorites}</a> &nbsp;&nbsp; <img src="images/print.gif" style="vertical-align:baseline" alt="{$LANG.knowledgebaseprint}"> <a href="#" onclick="window.print();return false">{$LANG.knowledgebaseprint}</a>
@@ -7,6 +8,7 @@
 <div class="page-header">
 	<h1>{$LANG.knowledgebasetitle}</h1>
 </div>
+
 
 {literal}
 <script type="text/javascript">
