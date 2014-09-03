@@ -95,7 +95,7 @@
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
 								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="{$LANG.hello}, {$loggedinuser.firstname}!">{$LANG.hello}, {$loggedinuser.firstname}!<b class="caret"></b></a>
+									<a href="#" class="dropdown-toggle navbar-gravatar" data-toggle="dropdown"><img src="//www.gravatar.com/avatar/{$clientsdetails.email|md5}?s=40&d=mm" class="img-rounded"> <b class="caret"></b></a>
 									<ul class="dropdown-menu">
 										<li><a href="clientarea.php?action=details" title=">{$LANG.editaccountdetails}">{$LANG.editaccountdetails}</a></li>
 										<li><a href="clientarea.php?action=contacts" title="{$LANG.clientareanavcontacts}">{$LANG.clientareanavcontacts}</a></li>

@@ -97,3 +97,8 @@ body { padding-top: 20px; padding-bottom: 20px; }
 .rating span.selected { 
 	background: url('../img/rating_star_filled.png') no-repeat;
 }
+
+.navbar-nav > li > a.navbar-gravatar {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
