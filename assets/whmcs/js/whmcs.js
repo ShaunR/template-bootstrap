@@ -23,11 +23,13 @@ $(function(){
 	$('a[rel=tooltip]').tooltip();
 
 	// toggle checkboxes
-	$('.toggle-checkboxes').change( function() {
-		var target = $(this).data().target;
-		$(target).attr('checked', this.checked).change();
+	$('#toggler').change( function() {
+		if (this.checked == true)
+		{$('.invids').prop('checked','checked').attr('checked','checked');}
+		else
+		{$('.invids').removeAttr('checked');}
 	});
-
+	
 	// Language Selector Styling fix
 	$('#languagefrm').addClass('form-inline');
 });
