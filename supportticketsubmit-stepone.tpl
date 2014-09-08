@@ -1,25 +1,30 @@
-<div class="page-header">
-	<h1>{$LANG.navopenticket}</h1>
-</div>
+<section>
+	<div class="container">
+		<h1>{$LANG.navopenticket}</h1>
+		
+		<p>{$LANG.supportticketsheader}</p>
 
-<p>{$LANG.supportticketsheader}</p>
-
-<div class="clearfix margin-top">
-	<ul class="media-list">
-		{foreach from=$departments item=department}
-		<li class="col-md-6 media">
-			<a href="{$smarty.server.PHP_SELF}?step=2&amp;deptid={$department.id}" title="{$department.name}" class="pull-left">
-				<img src="images/emails.gif" alt="email icon">
-			</a>
-			<div class="media-body">
-				<h3 class="media-heading"><a href="{$smarty.server.PHP_SELF}?step=2&amp;deptid={$department.id}" title="{$department.name}">{$department.name}</a></h3>
+		{foreach from=$departments item=department name=departments}
+		{if $smarty.foreach.departments.first}
+		<div class="row margin-top">
+		{elseif $smarty.foreach.departments.index % 3 == 0 }
+		</div>
+		<div class="row margin-top">
+		{/if}
+			<div class="col-md-4 text-center">
+				<h3>{$department.name}</h3>
 				{if $department.description}<p>{$department.description}</p>{/if}
+				<a href="{$smarty.server.PHP_SELF}?step=2&amp;deptid={$department.id}" title="{$department.name}" class="btn btn-primary">{$LANG.navopenticket}</a>
 			</div>
-		</li>
+		{if $smarty.foreach.departments.last}
+		</div>
+		{/if}
 		{foreachelse}
-		<li>
-			<div class="alert alert-info text-center">{$LANG.nosupportdepartments}</div>
-		</li>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="alert alert-warning text-center">{$LANG.nosupportdepartments}</div>
+			</div>
+		</div>
 		{/foreach}
-	</ul>
-</div>
+	</div>
+</section>

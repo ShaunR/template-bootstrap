@@ -1,28 +1,22 @@
-/* 
-Centered Layout Style
+body { padding-top: 50px; }
 
-body { background-color: #EFEFEF; }
-#whmcsheader { background-color: #ffffff; padding: 0px 15px 20px 15px; }
-#whmcsbody { background-color:#ffffff; padding: 15px; }
-#whmcsnavbar .navbar { margin-left:-30px; margin-right:-30px; }
+#whmcs-footer {
+	padding: 30px 0px;
+	margin-top: 30px;
+	border-top: 1px solid #ddd;
+}
 
-*/
+.bg-gray { background-color: #eee; }
 
+.margin-top-xs { margin-top: 10px; }
+.margin-top-sm { margin-top: 20px; }
+.margin-top { margin-top: 30px; }
 
-body { padding-top: 20px; padding-bottom: 20px; }
-
-#whmcsheader { padding-bottom:20px; }
-
-#whmcsnavbar .navbar { margin-bottom: 0px; }
-
-#whmcsfooter { background-color: #ffffff; padding-bottom: 15px;}
-
-#whmcsfooter #languagefrm { margin-bottom: 0px; }
+.margin-bottom-xs { margin-bottom: 10px; }
+.margin-bottom-sm { margin-bottom: 20px; }
+.margin-bottom { margin-bottom: 30px; }
 
 .page-header { margin-top: 0px; }
-
-.margin-bottom { margin-bottom: 20px; }
-.margin-top { margin-top: 20px; }
 
 /* table head sorting */
 .table-sorted th.sort-asc,

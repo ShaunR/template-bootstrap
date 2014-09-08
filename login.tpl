@@ -1,45 +1,31 @@
-<div class="page-header">
-	<h1>{$LANG.login}</h1>
-</div>
-
-<div class="row">
-	<div class="col-md-6 col-md-offset-3">
-{if $incorrect}
-		<div class="alert alert-danger alert-dismissable">
-			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-			{$LANG.loginincorrect}
-		</div>
-{/if}
-		<form method="post" action="{$systemsslurl}dologin.php" class="form-horizontal">
-			<fieldset>
-				<div class="form-group">
-					<label class="control-label col-md-4" for="username">{$LANG.loginemail}:</label>
-					<div class="col-md-8">
-						<input class="form-control" name="username" id="username" type="text">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="control-label col-md-4" for="password">{$LANG.loginpassword}:</label>
-					<div class="col-md-8">
-						<input class="form-control" name="password" id="password" type="password">
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-md-8 col-md-offset-4">
+<section>
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 margin-top margin-bottom">
+				<h1 class="h2">{$LANG.login}</h1>
+				{if $incorrect}<p class="text-danger"><strong>{$LANG.loginincorrect}</strong></p>{/if}
+				<form method="post" action="{$systemsslurl}dologin.php" class="well well-sm margin-top">
+					<fieldset>
+						<div class="form-group">
+							<input type="email" name="username" value="{if $smarty.request.username}{$smarty.request.username}{/if}" placeholder="{$LANG.loginemail}" class="form-control text-center input-lg">
+						</div>
+						<div class="form-group">
+							<input type="password" name="password" placeholder="{$LANG.loginpassword}" class="form-control text-center input-lg">
+						</div>
 						<div class="checkbox">
 							<label>
 								<input type="checkbox" name="rememberme"{if $rememberme} checked="checked"{/if}> {$LANG.loginrememberme}
 							</label>
 						</div>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-md-8 col-md-offset-4">
-						<button type="submit" class="btn btn-primary">{$LANG.loginbutton}</button>
-						<a href="pwreset.php" style="margin-left:10px;">{$LANG.loginforgotteninstructions}</a>
-					</div>
-				</div>
-			</fieldset>
-		</form>
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary btn-lg btn-block">{$LANG.loginbutton}</button>
+						</div>
+						<p class="form-group">
+							<a href="pwreset.php" title="{$LANG.loginforgotteninstructions}">{$LANG.loginforgotteninstructions}</a>
+						</p>
+					</fieldset>
+				</form>
+			</div>
+		</div>
 	</div>
-</div>
+</section>
