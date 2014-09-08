@@ -34,7 +34,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a href="{$systemurl}" title="{$companyname}"><img src="templates/{$template}/assets/whmcs/img/logo.png" alt="{$companyname}" class="img-responsive"></a>
+						<a href="{$systemurl}" title="{$companyname}"><img src="{$logo}" alt="{$companyname}" id="navbar-logo" class="img-responsive"></a>
 					</div>
 					<nav class="collapse navbar-collapse" id="navbar-collapse-1" role="navigation">
 {if $loggedin}
