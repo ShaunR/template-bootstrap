@@ -102,6 +102,7 @@
 									<li><a href="logout.php" title="{$LANG.logouttitle}">{$LANG.logouttitle}</a></li>
 								</ul>
 							</li>
+							{if $smarty.session.adminid}<li><a href="admin/clientssummary.php?userid={$smarty.session.uid}&amp;return=1">Return to Admin Area</a></li>{/if}
 						</ul>
 {else}
 						<ul class="nav navbar-nav">
