@@ -41,7 +41,7 @@
 						<ul class="nav navbar-nav">
 							<li><a href="clientarea.php" title="{$LANG.hometitle}">{$LANG.hometitle}</a></li>
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="{$LANG.navservices}">{$LANG.navservices}<b class="caret"></b></a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="{$LANG.navservices}">{$LANG.navservices} <span class="fa fa-angle-down"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="clientarea.php?action=products" title="{$LANG.clientareanavservices}">{$LANG.clientareanavservices}</a></li>
 									{if $condlinks.pmaddon}<li><a href="index.php?m=project_management" title="{$LANG.clientareaprojects}">{$LANG.clientareaprojects}</a></li>{/if}
@@ -52,7 +52,7 @@
 							</li>
 							{if $condlinks.domainreg || $condlinks.domaintrans}
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="{$LANG.navdomains}">{$LANG.navdomains}<b class="caret"></b></a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="{$LANG.navdomains}">{$LANG.navdomains} <span class="fa fa-angle-down"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="clientarea.php?action=domains" title="{$LANG.clientareanavdomains}">{$LANG.clientareanavdomains}</a></li>
 									<li class="divider"></li>
@@ -66,7 +66,7 @@
 							</li>
 							{/if}
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="{$LANG.navbilling}">{$LANG.navbilling}<b class="caret"></b></a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="{$LANG.navbilling}">{$LANG.navbilling} <span class="fa fa-angle-down"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="clientarea.php?action=invoices" title="{$LANG.invoices}">{$LANG.invoices}</a></li>
 									<li><a href="clientarea.php?action=quotes" title="{$LANG.quotestitle}">{$LANG.quotestitle}</a></li>
@@ -77,7 +77,7 @@
 								</ul>
 							</li>
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="{$LANG.navsupport}">{$LANG.navsupport}<b class="caret"></b></a>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="{$LANG.navsupport}">{$LANG.navsupport} <span class="fa fa-angle-down"></span></a>
 								 <ul class="dropdown-menu">
 									<li><a href="submitticket.php" title="{$LANG.navopenticket}">{$LANG.navopenticket}</a></li>
 									<li><a href="supporttickets.php" title="{$LANG.navtickets}">{$LANG.navtickets}</a></li>
@@ -92,9 +92,9 @@
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle navbar-gravatar" data-toggle="dropdown"><img src="//www.gravatar.com/avatar/{$clientsdetails.email|md5}?s=36&amp;d=mm" alt="Profile Photo" class="img-rounded"> <b class="caret"></b></a>
+								<a href="#" class="dropdown-toggle navbar-gravatar" data-toggle="dropdown"><img src="//www.gravatar.com/avatar/{$clientsdetails.email|md5}?s=36&amp;d=mm" alt="Profile Photo" class="img-rounded"> <span class="fa fa-angle-down"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="clientarea.php?action=details" title=">{$LANG.editaccountdetails}">{$LANG.editaccountdetails}</a></li>
+									<li><a href="clientarea.php?action=details" title="{$LANG.editaccountdetails}">{$LANG.editaccountdetails}</a></li>
 									<li><a href="clientarea.php?action=contacts" title="{$LANG.clientareanavcontacts}">{$LANG.clientareanavcontacts}</a></li>
 									<li><a href="clientarea.php?action=emails" title="{$LANG.navemailssent}">{$LANG.navemailssent}</a></li>
 									<li><a href="clientarea.php?action=changepw" title="{$LANG.clientareanavchangepw}">{$LANG.clientareanavchangepw}</a></li>
@@ -115,7 +115,7 @@
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle navbar-gravatar" data-toggle="dropdown"><img src="//www.gravatar.com/avatar/?s=36&amp;d=mm" alt="Profile Photo" class="img-rounded"> <b class="caret"></b></a>
+								<a href="#" class="dropdown-toggle navbar-gravatar" data-toggle="dropdown"><img src="//www.gravatar.com/avatar/?s=36&amp;d=mm" alt="Profile Photo" class="img-rounded"> <span class="fa fa-angle-down"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="clientarea.php">{$LANG.login}</a></li>
 									<li><a href="register.php">{$LANG.register}</a></li>

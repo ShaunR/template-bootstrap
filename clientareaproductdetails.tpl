@@ -31,7 +31,7 @@
 			{if $addons || $addonsavailable}<li><a href="#tab-addons" data-toggle="tab" title="{$LANG.clientareahostingaddons}">{$LANG.clientareahostingaddons}</a></li>{/if}
 			{if $packagesupgrade || $configoptionsupgrade || $showcancelbutton || $modulecustombuttons}
 			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="{$LANG.productmanagementactions}">{$LANG.productmanagementactions}<b class="caret"></b></a>
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="{$LANG.productmanagementactions}">{$LANG.productmanagementactions} <span class="fa fa-angle-down"></span></a>
 				<ul class="dropdown-menu">
 					{foreach from=$modulecustombuttons key=label item=command}
 					<li><a href="clientarea.php?action=productdetails&amp;id={$id}&amp;modop=custom&amp;a={$command}" title="{$label}">{$label}</a></li>
@@ -113,9 +113,7 @@
 							</div>
 						</div>
 						{if $moduleclientarea}
-						<hr>
-						<div class="moduleoutput">{$moduleclientarea|replace:'modulebutton':'btn'}</div>
-						<hr>
+						<div class="moduleoutput">{$moduleclientarea}</div>
 						{/if}
 					</div>
 				</div>

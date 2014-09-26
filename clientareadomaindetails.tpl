@@ -41,7 +41,7 @@
 				{if $addonscount}<li><a href="#tab-domainaddons" data-toggle="tab" title="{$LANG.clientareahostingaddons}">{$LANG.clientareahostingaddons}</a></li>{/if}
 				{if $managecontacts || $registerns || $dnsmanagement || $emailforwarding || $getepp}
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="{$LANG.domainmanagementtools}">{$LANG.domainmanagementtools}<b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="{$LANG.domainmanagementtools}">{$LANG.domainmanagementtools} <span class="fa fa-angle-down"></span></a>
 					<ul class="dropdown-menu">
 						{if $managecontacts}<li><a href="clientarea.php?action=domaincontacts&amp;domainid={$domainid}" title="{$LANG.domaincontactinfo}">{$LANG.domaincontactinfo}</a></li>{/if}
 						{if $registerns}<li><a href="clientarea.php?action=domainregisterns&amp;domainid={$domainid}" title="{$LANG.domainregisterns}">{$LANG.domainregisterns}</a></li>{/if}
