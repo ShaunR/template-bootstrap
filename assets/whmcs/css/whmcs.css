@@ -214,8 +214,8 @@ body { padding-top: 50px; }
 /* additonal bootstrap labels */
 .label-pending { background-color:#F89406; }
 .label-active { background-color:#46A546; }
-.label-suspended { background-color: #0768B8; }
-.label-terminated { background-color: #C43C35; }
+.label-suspended { background-color: #a94442; }
+.label-terminated { background-color: #bfbfbf; }
 .label-cancelled { background-color: #BFBFBF; }
 .label-expired { background-color: #888888; }
 .label-fraud { background-color: #000000; }
