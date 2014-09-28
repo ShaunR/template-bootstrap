@@ -1,6 +1,13 @@
-<section class="mrgin-top">
+<section>
 	<div class="container">
-		<h1>{if $groupname}{$groupname} - {/if}{$product} <span class="pull-right label label-{$rawstatus}">{$status}</span></h1>
+		<div class="row">
+			<div class="col-md-9">
+				<h1>{if $groupname}{$groupname} - {/if}{$product}</h1>
+			</div>
+			<div class="col-md-3">
+				<div class="h1 text-right"><span class="label label-{$rawstatus}">{$status}</span></div>
+			</div>
+		</div>
 		<hr>
 		{if $modulechangepwresult eq "success"}
 		<div class="alert alert-success alert-dismissable">
@@ -29,8 +36,44 @@
 		</div>
 		{/if}
 
-
 		<div class="row">
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading"><strong>{$LANG.navbilling}</strong>{if $showcancelbutton} <span class="pull-right"><a href="clientarea.php?action=cancel&amp;id={$id}">{$LANG.clientareacancelrequestbutton}</a></span>{/if}</div>
+					<div class="panel-body">
+						<p><strong>{$LANG.clientareahostingregdate}:</strong><br>{$regdate}</p>
+						<p><strong>{$LANG.firstpaymentamount}:</strong><br>{$firstpaymentamount}</p>
+						<p><strong>{$LANG.recurringamount}:</strong><br>{$recurringamount}</p>
+						<p><strong>{$LANG.clientareahostingnextduedate}:</strong><br>{$nextduedate}</p>
+						<p><strong>{$LANG.orderbillingcycle}:</strong><br>{$billingcycle}</p>
+						<p><strong>{$LANG.orderpaymentmethod}:</strong><br>{$paymentmethod}</p>
+					</div>
+				</div>
+				{if $modulechangepassword || $modulecustombuttons}
+				<div class="panel panel-default">
+					<div class="panel-heading"><strong>{$LANG.productmanagementactions}</strong></div>
+					<div class="panel-body">
+						{if $modulechangepassword}<a href="#modal-modulechangepassword" data-toggle="modal" title="{$LANG.serverchangepassword}" class="btn btn-default btn-sm">{$LANG.serverchangepassword}</a>{/if}
+						{foreach from=$modulecustombuttons key=label item=command}
+						<a href="clientarea.php?action=productdetails&amp;id={$id}&amp;modop=custom&amp;a={$command}" title="{$label}" class="btn btn-default btn-sm">{$label}</a>
+						{/foreach}
+					</div>
+				</div>
+				{/if}
+				{if $downloads}
+				<div class="panel panel-default">
+					<div class="panel-heading"><strong>{$LANG.downloadstitle}</strong></div>
+					<ul class="list-group">
+						{foreach from=$downloads item=download}
+						<li class="list-group-item">
+							<a href="{$download.link}" title="{$LANG.downloadname} {$download.title}"><strong>{$download.title}</strong></a>
+							{if $download.description}<p>{$download.description}</p>{/if}
+						</li>
+						{/foreach}
+					</ul>
+				</div>
+				{/if}
+			</div>
 			<div class="col-md-8">
 				<div class="panel panel-default">
 					<div class="panel-heading"><strong>{$LANG.information}</strong>{if $packagesupgrade} <span class="pull-right"><a href="upgrade.php?type=package&amp;id={$id}">{$LANG.upgradedowngradepackage}</a></span>{/if}</div>
@@ -56,18 +99,16 @@
 						{if $lastupdate}
 						<div class="row">
 							<div class="col-md-4">
-								<p><strong>{$LANG.clientareadiskusage}:</strong><br>{$diskusage}MB / {$disklimit}MB
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="{$diskpercent}" aria-valuemin="0" aria-valuemax="100" style="width: {$diskpercent};">{$diskpercent}</div>
-									</div>
-								</p>
+								<p><strong>{$LANG.clientareadiskusage}:</strong><br>{$diskusage}MB / {$disklimit}MB</p>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="{$diskpercent|replace:'%':''}" aria-valuemin="0" aria-valuemax="100" style="width: {$diskpercent};">{$diskpercent}</div>
+								</div>
 							</div>
 							<div class="col-md-4">
-								<p><strong>{$LANG.clientareabwusage}:</strong><br>{$bwusage}MB / {$bwlimit}MB
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="{$bwpercent}" aria-valuemin="0" aria-valuemax="100" style="width: {$bwpercent};">{$bwpercent}</div>
-									</div>
-								</p>
+								<p><strong>{$LANG.clientareabwusage}:</strong><br>{$bwusage}MB / {$bwlimit}MB</p>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="{$bwpercent|replace:'%':''}" aria-valuemin="0" aria-valuemax="100" style="width: {$bwpercent};">{$bwpercent}</div>
+								</div>
 							</div>
 						</div>
 						{/if}
@@ -152,45 +193,6 @@
 				{if $moduleclientarea}
 				<div class="moduleoutput">{$moduleclientarea}</div>
 				{/if}
-
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-default">
-					<div class="panel-heading"><strong>{$LANG.navbilling}</strong>{if $showcancelbutton} <span class="pull-right"><a href="clientarea.php?action=cancel&amp;id={$id}">{$LANG.clientareacancelrequestbutton}</a></span>{/if}</div>
-					<div class="panel-body">
-						<p><strong>{$LANG.clientareahostingregdate}:</strong><br>{$regdate}</p>
-						<p><strong>{$LANG.firstpaymentamount}:</strong><br>{$firstpaymentamount}</p>
-						<p><strong>{$LANG.recurringamount}:</strong><br>{$recurringamount}</p>
-						<p><strong>{$LANG.clientareahostingnextduedate}:</strong><br>{$nextduedate}</p>
-						<p><strong>{$LANG.orderbillingcycle}:</strong><br>{$billingcycle}</p>
-						<p><strong>{$LANG.orderpaymentmethod}:</strong><br>{$paymentmethod}</p>
-					</div>
-				</div>
-				{if $modulechangepassword || $modulecustombuttons}
-				<div class="panel panel-default">
-					<div class="panel-heading"><strong>{$LANG.productmanagementactions}</strong></div>
-					<ul class="nav nav-pills nav-stacked text-center">
-						{if $modulechangepassword}<li><a href="#modal-modulechangepassword" data-toggle="modal" title="{$LANG.serverchangepassword}">{$LANG.serverchangepassword}</a></li>{/if}
-						{foreach from=$modulecustombuttons key=label item=command}
-						<li><a href="clientarea.php?action=productdetails&amp;id={$id}&amp;modop=custom&amp;a={$command}" title="{$label}">{$label}</a></li>
-						{/foreach}
-					</ul>
-				</div>
-				{/if}
-				{if $downloads}
-				<div class="panel panel-default">
-					<div class="panel-heading"><strong>{$LANG.downloadstitle}</strong></div>
-						<ul class="list-group">
-						{foreach from=$downloads item=download}
-							<li class="list-group-item">
-								<a href="{$download.link}" title="{$LANG.downloadname} {$download.title}"><strong>{$download.title}</strong></a>
-								{if $download.description}<p>{$download.description}</p>{/if}
-							</li>
-						{/foreach}
-						</ul>
-					</div>
-				</div>
-				{/if}
 			</div>
 		</div>
 	</div>
@@ -226,8 +228,8 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-primary">{$LANG.clientareanavchangepw}</button>
-				<button type="reset" class="btn btn-default">{$LANG.cancel}</button>
+				<button type="submit" class="btn btn-primary">{$LANG.clientareanavchangepw}</button>
+				<button type="reset" class="btn btn-default" data-dismiss="modal">{$LANG.cancel}</button>
 			</div>
 		</form>
 	</div>
