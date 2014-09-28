@@ -24,21 +24,31 @@
 		</div>
 			{/if}
 			
-		<div class="alert alert-info alert-block">
-			{$LANG.clientareacancelproduct}: <strong>{if $groupname}{$groupname} - {/if}{$productname}</strong>{if $domain} ({$domain}){/if}
-		</div>
-		
 		<form method="post" action="{$smarty.server.PHP_SELF}">
 			<input type="hidden" name="sub" value="submit">
 			<input type="hidden" name="action" value="cancel">
 			<input type="hidden" name="id" value="{$id}">
-			<label for="cancellationreason">{$LANG.clientareacancelreason}</label>
-			<textarea name="cancellationreason" id="cancellationreason" rows="6" class="col-md-12"></textarea>
-			<label for="type">{$LANG.clientareacancellationtype}</label>
-			<select name="type" id="type">
-				<option value="Immediate">{$LANG.clientareacancellationimmediate}</option>
-				<option value="End of Billing Period">{$LANG.clientareacancellationendofbillingperiod}</option>
-			</select>
+			<div class="row">
+				<div class="col-md-8">
+					<div class="form-group">
+						<label>{$LANG.clientareacancelproduct}:</label>
+						<p class="form-control-static">{if $groupname}{$groupname} - {/if}{$productname}{if $domain} ({$domain}){/if}
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label for="type">{$LANG.clientareacancellationtype}</label>
+						<select name="type" id="type" class="form-control">
+							<option value="Immediate">{$LANG.clientareacancellationimmediate}</option>
+							<option value="End of Billing Period">{$LANG.clientareacancellationendofbillingperiod}</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="cancellationreason">{$LANG.clientareacancelreason}</label>
+				<textarea name="cancellationreason" id="cancellationreason" rows="6" class="form-control"></textarea>
+			</div>
 			{if $domainid}
 			<div class="alert alert-warning alert-block">
 				<h4 class="alert-heading">{$LANG.cancelrequestdomain}</h4>
