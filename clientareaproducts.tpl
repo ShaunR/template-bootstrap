@@ -31,7 +31,7 @@
 				<tbody>
 					{foreach from=$services item=service}
 					<tr>
-						<td>{$service.group} - {$service.product}{if $service.domain}<br ><a href="http://{$service.domain}" target="_blank">{$service.domain}</a>{/if}</td>
+						<td>{$service.product}{if $service.domain}<br ><a href="http://{$service.domain}" target="_blank">{$service.domain}</a>{/if}</td>
 						<td>{$service.amount}</td>
 						<td>{$service.billingcycle}</td>
 						<td>{$service.nextduedate}</td>
