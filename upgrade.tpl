@@ -3,7 +3,7 @@
 		<h1>{$LANG.upgradedowngradepackage}</h1>
 		
 		<div class="alert alert-info">
-			<span class="lead">{$LANG.orderproduct}: <strong>{if $groupname}{$groupname} - {/if}{$productname}</strong>{if $domain} ({$domain}){/if}</span>
+			<span class="lead">{$LANG.orderproduct}: <strong>{$productname}</strong>{if $domain} ({$domain}){/if}</span>
 		</div>
 		
 		{if $overdueinvoice}
@@ -40,7 +40,7 @@
 				<input type="hidden" name="pid" value="{$upgradepackage.pid}">
 				<div class="row">
 					<div class="col-md-6">
-						<h4>{if $upgradepackage.groupname}{$upgradepackage.groupname} - {/if}{$upgradepackage.name}</h4>
+						<h4>{$upgradepackage.name}</h4>
 					</div>
 					<div class="col-md-4">
 						{if $upgradepackage.pricing.type eq "free"}

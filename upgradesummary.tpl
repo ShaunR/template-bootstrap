@@ -3,7 +3,7 @@
 		<h1>{$LANG.upgradedowngradepackage}</h1>
 		
 		<div class="alert alert-info">
-			<span class="lead">{$LANG.orderproduct}: <strong>{if $groupname}{$groupname} - {/if}{$productname}</strong>{if $domain} ({$domain}){/if}</span>
+			<span class="lead">{$LANG.orderproduct}: <strong>{$productname}</strong>{if $domain} ({$domain}){/if}</span>
 		</div>
 		
 		<table class="table table-striped table-bordered">

@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9">
-				<h1>{if $groupname}{$groupname} - {/if}{$product}</h1>
+				<h1>{$product}</h1>
 			</div>
 			<div class="col-md-3">
 				<div class="h1 text-right"><span class="label label-{$rawstatus}">{$status}</span></div>
@@ -78,7 +78,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading"><strong>{$LANG.information}</strong>{if $packagesupgrade} <span class="pull-right"><a href="upgrade.php?type=package&amp;id={$id}">{$LANG.upgradedowngradepackage}</a></span>{/if}</div>
 					<div class="panel-body">
-						<p><strong>{$LANG.orderproduct}:</strong><br>{if $groupname}{$groupname} - {/if}{$product}</p>
+						<p><strong>{$LANG.orderproduct}:</strong><br>{$product}</p>
 						<div class="row">
 							{if $domain}
 							<div class="col-md-4">

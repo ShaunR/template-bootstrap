@@ -32,7 +32,7 @@
 				<div class="col-md-8">
 					<div class="form-group">
 						<label>{$LANG.clientareacancelproduct}:</label>
-						<p class="form-control-static">{if $groupname}{$groupname} - {/if}{$productname}{if $domain} ({$domain}){/if}
+						<p class="form-control-static">{$productname}{if $domain} ({$domain}){/if}
 					</div>
 				</div>
 				<div class="col-md-4">
