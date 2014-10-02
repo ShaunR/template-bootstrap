@@ -198,6 +198,7 @@
 	</div>
 </section>
 
+{if $modulechangepassword}
 <div class="modal fade" id="modal-modulechangepassword">
 	<div class="modal-dialog">
 		<form method="post" action="{$smarty.server.PHP_SELF}" class="modal-content">
@@ -234,44 +235,43 @@
 		</form>
 	</div>
 </div>
-
 {literal}
-		<script type="text/javascript">
-			$(function() {
-				// Password Strength
-				$('#modulenewpw').keyup(function() {
-					$(this).parent().removeClass('has-warning has-error has-success');
-					$(this).next().removeClass('glyphicon-thumbs-down glyphicon-thumbs-up');
-					if($(this).val().length == 0) {
-						return;
-					}
-					var pwstrength = passwordStrength($(this).val());
-					if(pwstrength > 75) {
-						$(this).parent().addClass("has-success");
-						$(this).next().addClass('glyphicon-thumbs-up');
-					} else if (pwstrength > 30) {
-						$(this).parent().addClass("has-warning");
-						$(this).next().addClass('glyphicon-thumbs-down');
-					} else {
-						$(this).parent().addClass("has-error");
-						$(this).next().addClass('glyphicon-thumbs-down');
-					}
-					$('#confirmpw').keyup();
-				});
-				// Compare passwords
-				$('#moduleconfirmpw').keyup(function() {
-					$(this).parent().removeClass('has-error has-success');
-					$(this).next().removeClass('glyphicon-thumbs-down glyphicon-thumbs-up');
-					if($(this).val().length < 1) return;
-					if($('#modulenewpw').val() != $(this).val()) {
-						$(this).parent().addClass("has-error");
-						$(this).next().addClass('glyphicon-thumbs-down');
-					} else {
-						$(this).parent().addClass("has-success");
-						$(this).next().addClass('glyphicon-thumbs-up');
-					}
-				});
-			});
-		</script>
+<script type="text/javascript">
+	$(function() {
+		// Password Strength
+		$('#modulenewpw').keyup(function() {
+			$(this).parent().removeClass('has-warning has-error has-success');
+			$(this).next().removeClass('glyphicon-thumbs-down glyphicon-thumbs-up');
+			if($(this).val().length == 0) {
+				return;
+			}
+			var pwstrength = passwordStrength($(this).val());
+			if(pwstrength > 75) {
+				$(this).parent().addClass("has-success");
+				$(this).next().addClass('glyphicon-thumbs-up');
+			} else if (pwstrength > 30) {
+				$(this).parent().addClass("has-warning");
+				$(this).next().addClass('glyphicon-thumbs-down');
+			} else {
+				$(this).parent().addClass("has-error");
+				$(this).next().addClass('glyphicon-thumbs-down');
+			}
+			$('#confirmpw').keyup();
+		});
+		// Compare passwords
+		$('#moduleconfirmpw').keyup(function() {
+			$(this).parent().removeClass('has-error has-success');
+			$(this).next().removeClass('glyphicon-thumbs-down glyphicon-thumbs-up');
+			if($(this).val().length < 1) return;
+			if($('#modulenewpw').val() != $(this).val()) {
+				$(this).parent().addClass("has-error");
+				$(this).next().addClass('glyphicon-thumbs-down');
+			} else {
+				$(this).parent().addClass("has-success");
+				$(this).next().addClass('glyphicon-thumbs-up');
+			}
+		});
+	});
+</script>
 {/literal}
-
+{/if}
