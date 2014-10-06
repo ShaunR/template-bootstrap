@@ -97,3 +97,6 @@
 		<div class="text-right">
 			<img src="images/rssfeed.gif" alt="RSS" style="vertical-align:textbottom"> <a href="networkissuesrss.php">{$LANG.announcementsrss}</a>
 		</div>
+
+	</div>
+</section>
