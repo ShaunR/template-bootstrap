@@ -12,6 +12,8 @@
 			<script type="text/javascript" src="templates/{$template}/assets/bootstrap/js/bootstrap.min.js"></script>
 			<link href="templates/{$template}/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+			<script type="text/javascript" src="templates/{$template}/assets/bootbox/js/bootbox.min.js"></script>
+
 			<link href="templates/{$template}/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	
 			<script src="templates/{$template}/assets/whmcs/js/whmcs.js"></script>
