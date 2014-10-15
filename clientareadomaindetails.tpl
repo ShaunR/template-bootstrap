@@ -277,6 +277,7 @@
 		                  </div>
 								<button type="submit" class="btn btn-danger">{$LANG.domainreglockdisable}</button>
 		   	            {else}
+								<input type="hidden" name="reglock" value="1">
 		                  <div class="alert alert-danger alert-block text-center">
 		                     <h3 class="alert-heading">{$LANG.domainreglockstatus}: {$LANG.domainsautorenewdisabled}</h3>
 		                  </div>
