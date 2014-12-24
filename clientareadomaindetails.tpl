@@ -35,7 +35,7 @@
 			<ul class="nav nav-tabs" id="domaintabs">
 				<li class="active"><a href="#tab-information" data-toggle="tab" title="{$LANG.information}">{$LANG.information}</a></li>
 				<li><a href="#tab-autorenew" data-toggle="tab" title="{$LANG.domainsautorenew}">{$LANG.domainsautorenew}</a></li>
-				{if $rawstatus == "active"}<li><a href="#tab-nameservers" data-toggle="tab" title="{$LANG.domainnameservers}">{$LANG.domainnameservers}</a></li>{/if}
+				{if $rawstatus == "active" && $managens}<li><a href="#tab-nameservers" data-toggle="tab" title="{$LANG.domainnameservers}">{$LANG.domainnameservers}</a></li>{/if}
 				{if $lockstatus}{if $tld neq "co.uk" && $tld neq "org.uk" && $tld neq "ltd.uk" && $tld neq "plc.uk" && $tld neq "me.uk"}<li><a href="#tab-registrarlock" data-toggle="tab" title="{$LANG.domainregistrarlock}">{$LANG.domainregistrarlock}</a></li>{/if}{/if}
 				{if $releasedomain}<li><a href="#tab-domainrelease" data-toggle="tab" title="{$LANG.domainrelease}">{$LANG.domainrelease}</a></li>{/if}
 				{if $addonscount}<li><a href="#tab-domainaddons" data-toggle="tab" title="{$LANG.clientareahostingaddons}">{$LANG.clientareahostingaddons}</a></li>{/if}

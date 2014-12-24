@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset={$charset}">
 <title>{$companyname} - {$id}</title>
 <link rel="stylesheet" type="text/css" href="templates/{$template}/css/quote.css">
 <link href="includes/jscript/css/ui.all.css" rel="stylesheet" type="text/css" />
@@ -15,9 +13,9 @@ $("#quoteaccept").dialog({
     resizable: false,
     width: 500,
     modal: true,
-	buttons: {'Agree & Accept': function() {
-		    $("#quoteacceptfrm").submit();
-		}}
+    buttons: {'Agree & Accept': function() {
+            $("#quoteacceptfrm").submit();
+        }}
 });
 
 });
@@ -89,40 +87,40 @@ $("#quoteaccept").dialog({
 
 <table cellspacing="0" id="invoiceitemstable" align="center">
 <tr>
-	<td id="invoiceitemsheading" align="center" width="50%" style="border:1px solid #cccccc;border-bottom:0px;"><strong>{$LANG.invoicesdescription}</strong></td>
+    <td id="invoiceitemsheading" align="center" width="50%" style="border:1px solid #cccccc;border-bottom:0px;"><strong>{$LANG.invoicesdescription}</strong></td>
     <td id="invoiceitemsheading" align="center" width="25%" style="border:1px solid #cccccc;border-left:0px;border-bottom:0px;"><strong>{$LANG.quotediscountheading}</strong></td>
     <td id="invoiceitemsheading" align="center" width="25%" style="border:1px solid #cccccc;border-left:0px;border-bottom:0px;"><strong>{$LANG.invoicesamount}</strong></td>
 </tr>
 {foreach key=num item=quoteitem from=$quoteitems}
 <tr bgcolor=#ffffff>
-	<td id="invoiceitemsrow" style="border:1px solid #cccccc;border-bottom:0px;">{$quoteitem.description}{if $quoteitem.taxed eq "true"} *{/if}</td>
-    <td align="center" id="invoiceitemsrow" style="border:1px solid #cccccc;border-bottom:0px;border-left:0px;">{if $quoteitem.discount>0}{$quoteitem.discount} ({$quoteitem.discountpc}%){else} - {/if}</td>
+    <td id="invoiceitemsrow" style="border:1px solid #cccccc;border-bottom:0px;">{$quoteitem.description}{if $quoteitem.taxed eq "true"} *{/if}</td>
+    <td align="center" id="invoiceitemsrow" style="border:1px solid #cccccc;border-bottom:0px;border-left:0px;">{if $quoteitem.discount}{$quoteitem.discount} ({$quoteitem.discountpc}%){else} - {/if}</td>
     <td align="center" id="invoiceitemsrow" style="border:1px solid #cccccc;border-bottom:0px;border-left:0px;">{$quoteitem.amount}</td>
 </tr>
 {/foreach}
 <tr>
-	<td id="invoiceitemsheading" style="border:1px solid #cccccc;border-bottom:0px;"><div align="right">{$LANG.invoicessubtotal}:&nbsp;</div></td>
+    <td id="invoiceitemsheading" style="border:1px solid #cccccc;border-bottom:0px;"><div align="right">{$LANG.invoicessubtotal}:&nbsp;</div></td>
     <td id="invoiceitemsheading" align="center" style="border:1px solid #cccccc;border-bottom:0px;border-left:0px;">&nbsp;</td>
     <td id="invoiceitemsheading" align="center" style="border:1px solid #cccccc;border-bottom:0px;border-left:0px;"><strong>{$subtotal}</strong></td>
 </tr>
 {if $taxrate}
 <tr>
-	<td id="invoiceitemsheading" style="border:1px solid #cccccc;border-bottom:0px;"><div align="right">{$taxrate}% {$taxname}:&nbsp;</div></td>
+    <td id="invoiceitemsheading" style="border:1px solid #cccccc;border-bottom:0px;"><div align="right">{$taxrate}% {$taxname}:&nbsp;</div></td>
     <td id="invoiceitemsheading" align="center" style="border:1px solid #cccccc;border-bottom:0px;border-left:0px;">&nbsp;</td>
     <td id="invoiceitemsheading" align="center" style="border:1px solid #cccccc;border-bottom:0px;border-left:0px;"><strong>{$tax}</strong></td>
 </tr>
 {/if}
 {if $taxrate2}
 <tr>
-	<td id="invoiceitemsheading" style="border:1px solid #cccccc;border-bottom:0px;"><div align="right">{$taxrate2}% {$taxname2}:&nbsp;</div></td>
+    <td id="invoiceitemsheading" style="border:1px solid #cccccc;border-bottom:0px;"><div align="right">{$taxrate2}% {$taxname2}:&nbsp;</div></td>
     <td id="invoiceitemsheading" align="center" style="border:1px solid #cccccc;border-bottom:0px;border-left:0px;">&nbsp;</td>
     <td id="invoiceitemsheading" align="center" style="border:1px solid #cccccc;border-bottom:0px;border-left:0px;"><strong>{$tax2}</strong></td>
 </tr>
 {/if}
 <tr>
-	<td id="invoiceitemsheading" style="border:1px solid #cccccc;"><div align="right">{$LANG.quotelinetotal}:&nbsp;</div></td>
+    <td id="invoiceitemsheading" style="border:1px solid #cccccc;"><div align="right">{$LANG.quotelinetotal}:&nbsp;</div></td>
     <td id="invoiceitemsheading" align="center" style="border:1px solid #cccccc;border-left:0px;border-left:0px;">&nbsp;</td>
-	<td id="invoiceitemsheading" align="center" style="border:1px solid #cccccc;border-left:0px;"><strong>{$total}</strong></td>
+    <td id="invoiceitemsheading" align="center" style="border:1px solid #cccccc;border-left:0px;"><strong>{$total}</strong></td>
 </tr>
 </table>
 
@@ -140,15 +138,15 @@ $("#quoteaccept").dialog({
 
 <p align="center"><a href="clientarea.php">{$LANG.invoicesbacktoclientarea}</a> | <a href="dl.php?type=q&amp;id={$quoteid}">{$LANG.quotedlpdfbtn}</a> | <a href="javascript:window.close()">{$LANG.closewindow}</a></p>
 
-<div id="quoteaccept" title="Quote Acceptance" style="display:none;">
+<div id="quoteaccept" title="{$LANG.quoteacceptancetitle}" style="display:none;">
 
 <form method="post" action="{$smarty.server.PHP_SELF}?id={$quoteid}&action=accept" id="quoteacceptfrm">
 
-<p>To accept the quote, please confirm your acceptance of our terms of service which can be viewed @ <a href="{$tosurl}" target="_blank">{$tosurl}</a></p>
+<p>{$LANG.quoteacceptancehowto} <a href="{$tosurl}" target="_blank">{$tosurl}</a></p>
 
 <p align="center"><label><input type="checkbox" name="agreetos" /> {$LANG.ordertosagreement} <a href="{$tosurl}" target="_blank">{$LANG.ordertos}</a></label></p>
 
-<p>Please be aware that accepting a quote is considered entering into a contract and you will not be able to cancel once accepted.</p>
+<p>{$LANG.quoteacceptancewarning}</p>
 
 </form>
 
