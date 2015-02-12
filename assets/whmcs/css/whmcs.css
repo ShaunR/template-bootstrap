@@ -224,19 +224,6 @@ body { padding-top: 50px; }
 .label-refunded { background-color: #224488; }
 .label-collections { background-color: #D3C403; }
 
-[class^="icon32-"],
-[class*="icon32-"] {
-	display: inline-block;
-	width: 32px;
-	height: 32px;
-	line-height: 32px;
-	*margin-right: .3em;
-	vertical-align: text-top;
-	background-repeat: no-repeat;
-}
-
-.icon32-twitter { background-image: url("../img/twitter32.png"); }
-
 .ticketreply {
 	border-color: #ddd;
 	border-width: 0 1px; 
