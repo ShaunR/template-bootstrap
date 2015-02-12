@@ -199,18 +199,6 @@ body { padding-top: 50px; }
   padding-right: 33px;
 }
 
-
-/* table head sorting */
-.table-sorted th.sort-asc,
-.table-sorted th.sort-desc {
-	background-color: rgba(141, 192, 219, 0.25);
-	background-position: 95% 50%;
-	background-repeat: no-repeat;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-}
-.table-sorted th.sort-desc { background-image: url('../img/sort-desc.png'); }
-.table-sorted th.sort-asc { background-image: url('../img/sort-asc.png'); }
-
 /* additonal bootstrap labels */
 .label-pending { background-color:#F89406; }
 .label-active { background-color:#46A546; }

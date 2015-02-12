@@ -5,14 +5,14 @@
 		<p>{$numitems} {$LANG.recordsfound}, {$LANG.page} {$pagenumber} {$LANG.pageof} {$totalpages}</p>
 		
 		<div class="panel panel-default">
-			<table class="table table-striped table-sorted">
+			<table class="table table-striped">
 				<thead>
 					<tr>
-						<th{if $orderby eq "id"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=quotes&orderby=id" title="{$LANG.quotenumber}">{$LANG.quotenumber}</a></th>
-						<th{if $orderby eq "subject"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=quotes&orderby=subject" title="{$LANG.quotesubject}">{$LANG.quotesubject}</a></th>
-						<th{if $orderby eq "datecreated"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=quotes&orderby=datecreated" title="{$LANG.quotedatecreated}">{$LANG.quotedatecreated}</a></th>
-						<th{if $orderby eq "validuntil"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=quotes&orderby=validuntil" title="{$LANG.quotevaliduntil}">{$LANG.quotevaliduntil}</a></th>
-						<th{if $orderby eq "stage"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=quotes&orderby=stage" title="{$LANG.quotestage}">{$LANG.quotestage}</a></th>
+						<th><a href="clientarea.php?action=quotes&orderby=id" title="{$LANG.quotenumber}">{$LANG.quotenumber}{if $orderby eq "id"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
+						<th><a href="clientarea.php?action=quotes&orderby=subject" title="{$LANG.quotesubject}">{$LANG.quotesubject}{if $orderby eq "subject"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
+						<th><a href="clientarea.php?action=quotes&orderby=datecreated" title="{$LANG.quotedatecreated}">{$LANG.quotedatecreated}{if $orderby eq "datecreated"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
+						<th><a href="clientarea.php?action=quotes&orderby=validuntil" title="{$LANG.quotevaliduntil}">{$LANG.quotevaliduntil}{if $orderby eq "validuntil"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
+						<th><a href="clientarea.php?action=quotes&orderby=stage" title="{$LANG.quotestage}">{$LANG.quotestage}{if $orderby eq "stage"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
 						<th>&nbsp;</th>
 					</tr>
 				</thead>

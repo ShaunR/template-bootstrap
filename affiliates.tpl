@@ -85,14 +85,14 @@
 		<p>{$numitems} {$LANG.recordsfound}, {$LANG.page} {$pagenumber} {$LANG.pageof} {$totalpages}</p>
 	
 		<div class="panel panel-default">
-			<table class="table table-striped table-sorted">
+			<table class="table table-striped">
 				<thead>
 					<tr>
-						<th{if $orderby eq "date"} class="sort-{$sort}"{/if}><a href="affiliates.php?orderby=date">{$LANG.affiliatessignupdate}</a></th>
-						<th{if $orderby eq "product"} class="sort-{$sort}"{/if}><a href="affiliates.php?orderby=product">{$LANG.orderproduct}</a></th>
-						<th{if $orderby eq "amount"} class="sort-{$sort}"{/if}><a href="affiliates.php?orderby=amount">{$LANG.affiliatesamount}</a></th>
-						<th>{$LANG.affiliatescommission}</th>
-						<th{if $orderby eq "status"} class="sort-{$sort}"{/if}><a href="affiliates.php?orderby=status">{$LANG.affiliatesstatus}</a></th>
+						<th><a href="affiliates.php?orderby=date">{$LANG.affiliatessignupdate}{if $orderby eq "date"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
+						<th><a href="affiliates.php?orderby=product">{$LANG.orderproduct}{if $orderby eq "product"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
+						<th><a href="affiliates.php?orderby=amount">{$LANG.affiliatesamount}{if $orderby eq "amount"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
+						<th><a href="affiliates.php?orderby=commission">{$LANG.affiliatescommission}{if $orderby eq "commission"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
+						<th><a href="affiliates.php?orderby=status">{$LANG.affiliatesstatus}{if $orderby eq "status"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
 					</tr>
 				</thead>
 				<tbody>

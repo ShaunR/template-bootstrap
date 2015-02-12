@@ -4,26 +4,28 @@
 		
 		<p>{$numitems} {$LANG.recordsfound}, {$LANG.page} {$pagenumber} {$LANG.pageof} {$totalpages}</p>
 		
-		<table class="table table-striped table-bordered table-sorted">
-			<thead>
-				<tr>
-					<th{if $orderby eq "date"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=emails&amp;orderby=date">{$LANG.clientareaemailsdate}</a></th>
-					<th{if $orderby eq "subject"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=emails&amp;orderby=subject">{$LANG.clientareaemailssubject}</a></th>
-				</tr>
-			</thead>
-			<tbody>
-				{foreach from=$emails item=email}
-				<tr>
-					<td>{$email.date}</td>
-					<td><a href="viewemail.php?id={$email.id}" onclick="viewEmail({$email.id});return false;" title="{$LANG.emailviewmessage}">{$email.subject}</a></td>
-				</tr>
-				{foreachelse}
-				<tr>
-					<td colspan="2" class="text-center">{$LANG.norecordsfound}</td>
-				</tr>
-				{/foreach}
-			</tbody>
-		</table>
+		<div class="panel panel-default">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th><a href="clientarea.php?action=emails&amp;orderby=date">{$LANG.clientareaemailsdate}{if $orderby eq "date"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
+						<th><a href="clientarea.php?action=emails&amp;orderby=subject">{$LANG.clientareaemailssubject}{if $orderby eq "subject"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
+					</tr>
+				</thead>
+				<tbody>
+					{foreach from=$emails item=email}
+					<tr>
+						<td>{$email.date}</td>
+						<td><a href="viewemail.php?id={$email.id}" onclick="viewEmail({$email.id});return false;" title="{$LANG.emailviewmessage}">{$email.subject}</a></td>
+					</tr>
+					{foreachelse}
+					<tr>
+						<td colspan="2" class="text-center">{$LANG.norecordsfound}</td>
+					</tr>
+					{/foreach}
+				</tbody>
+			</table>
+		</div>
 		
 		<ul class="pagination">
 			<li{if !$prevpage} class="disabled"{/if}><a href="{if $prevpage}clientarea.php?action={$clientareaaction}&amp;page={$prevpage}{else}javascript:return false;{/if}">&larr; {$LANG.previouspage}</a></li>

@@ -18,14 +18,14 @@
 		</div>
 		
 		<div class="panel panel-default">
-			<table class="table table-striped table-sorted">
+			<table class="table table-striped">
 				<thead>
 					<tr>
-						<th{if $orderby eq "date"} class="sort-{$sort}"{/if}><a href="supporttickets.php?orderby=date" title="{$LANG.supportticketsdate}">{$LANG.supportticketsdate}</a></th>
-						<th{if $orderby eq "dept"} class="sort-{$sort}"{/if}><a href="supporttickets.php?orderby=dept" title="{$LANG.supportticketsdepartment}">{$LANG.supportticketsdepartment}</a></th>
-						<th{if $orderby eq "subject"} class="sort-{$sort}"{/if}><a href="supporttickets.php?orderby=subject" title="{$LANG.supportticketssubject}">{$LANG.supportticketssubject}</a></th>
-						<th{if $orderby eq "status"} class="sort-{$sort}"{/if}><a href="supporttickets.php?orderby=status" title="{$LANG.supportticketsstatus}">{$LANG.supportticketsstatus}</a></th>
-						<th{if $orderby eq "lastreply"} class="sort-{$sort}"{/if}><a href="supporttickets.php?orderby=lastreply" title="{$LANG.supportticketsticketlastupdated}">{$LANG.supportticketsticketlastupdated}</a></th>
+						<th><a href="supporttickets.php?orderby=date" title="{$LANG.supportticketsdate}">{$LANG.supportticketsdate}{if $orderby eq "date"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
+						<th><a href="supporttickets.php?orderby=dept" title="{$LANG.supportticketsdepartment}">{$LANG.supportticketsdepartment}{if $orderby eq "dept"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
+						<th><a href="supporttickets.php?orderby=subject" title="{$LANG.supportticketssubject}">{$LANG.supportticketssubject}{if $orderby eq "subject"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
+						<th><a href="supporttickets.php?orderby=status" title="{$LANG.supportticketsstatus}">{$LANG.supportticketsstatus}{if $orderby eq "status"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
+						<th><a href="supporttickets.php?orderby=lastreply" title="{$LANG.supportticketsticketlastupdated}">{$LANG.supportticketsticketlastupdated}{if $orderby eq "lastreply"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
 						<th>&nbsp;</th>
 					</tr>
 				</thead>

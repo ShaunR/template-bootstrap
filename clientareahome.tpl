@@ -84,14 +84,14 @@
 		<div class="clearfix">
 			<h3>{$clientsstats.numactivetickets} {$LANG.supportticketsopentickets} <small>( <a href="submitticket.php">{$LANG.opennewticket}</a> )</small></h3>
 			<div class="panel panel-default">
-				<table class="table table-striped table-sorted">
+				<table class="table table-striped">
 					<thead>
 						<tr>
 							<th><a href="supporttickets.php?orderby=date">{$LANG.supportticketsdate}</a></th>
 							<th><a href="supporttickets.php?orderby=subject">{$LANG.supportticketssubject}</a></th>
 							<th><a href="supporttickets.php?orderby=dept">{$LANG.supportticketsdepartment}</a></th>
 							<th><a href="supporttickets.php?orderby=status">{$LANG.supportticketsstatus}</a></th>
-							<th class="sort-desc"><a href="supporttickets.php?orderby=lastreply">{$LANG.supportticketsticketlastupdated}</a></th>
+							<th><a href="supporttickets.php?orderby=lastreply">{$LANG.supportticketsticketlastupdated} <span class="fa fa-sort-desc"></span></a></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -118,11 +118,11 @@
 		<h3>{$clientsstats.numdueinvoices} {$LANG.invoicesdue} <small>( <a href="clientarea.php?action=invoices">{$LANG.view}</a> )</small></h3>
 		<form method="post" action="clientarea.php?action=masspay" class="clearfix">
 			<div class="panel panel-default">
-				<table class="table table-striped table-sorted">
+				<table class="table table-striped">
 					<thead>
 						<tr>
 							{if $masspay}<th class="text-center"><input type="checkbox" onclick="toggleCheckboxes('invids')"></th>{/if}
-							<th class="sort-desc"><a href="clientarea.php?action=invoices&amp;orderby=id">{$LANG.invoicestitle}</a></th>
+							<th><a href="clientarea.php?action=invoices&amp;orderby=id">{$LANG.invoicestitle} <span class="fa fa-sort-desc"></span></a></th>
 							<th><a href="clientarea.php?action=invoices&amp;orderby=date">{$LANG.invoicesdatecreated}</a></th>
 							<th><a href="clientarea.php?action=invoices&amp;orderby=duedate">{$LANG.invoicesdatedue}</a></th>
 							<th><a href="clientarea.php?action=invoices&amp;orderby=total">{$LANG.invoicestotal}</a></th>

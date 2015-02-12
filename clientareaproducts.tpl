@@ -17,14 +17,14 @@
 		</div>
 	
 		<div class="panel panel-default">
-			<table id="resultslist" class="table table-striped table-sorted">
+			<table id="resultslist" class="table table-striped">
 				<thead>
 					<tr>
-						<th{if $orderby eq "product"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=products{if $q}&q={$q}{/if}&orderby=product">{$LANG.orderproduct}</a></th>
-						<th{if $orderby eq "price"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=products{if $q}&q={$q}{/if}&orderby=price">{$LANG.orderprice}</a></th>
-						<th{if $orderby eq "billingcycle"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=products{if $q}&q={$q}{/if}&orderby=billingcycle">{$LANG.orderbillingcycle}</a></th>
-						<th{if $orderby eq "nextduedate"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=products{if $q}&q={$q}{/if}&orderby=nextduedate">{$LANG.clientareahostingnextduedate}</a></th>
-						<th{if $orderby eq "status"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=products{if $q}&q={$q}{/if}&orderby=status">{$LANG.clientareastatus}</a></th>
+						<th><a href="clientarea.php?action=products{if $q}&q={$q}{/if}&orderby=product">{$LANG.orderproduct}{if $orderby eq "product"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
+						<th><a href="clientarea.php?action=products{if $q}&q={$q}{/if}&orderby=price">{$LANG.orderprice}{if $orderby eq "price"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
+						<th><a href="clientarea.php?action=products{if $q}&q={$q}{/if}&orderby=billingcycle">{$LANG.orderbillingcycle}{if $orderby eq "billingcycle"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
+						<th><a href="clientarea.php?action=products{if $q}&q={$q}{/if}&orderby=nextduedate">{$LANG.clientareahostingnextduedate}{if $orderby eq "nextduedate"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
+						<th><a href="clientarea.php?action=products{if $q}&q={$q}{/if}&orderby=status">{$LANG.clientareastatus}{if $orderby eq "status"} <span class="fa fa-sort-{$sort}"></span>{/if}</a></th>
 						<th>&nbsp;</th>
 					</tr>
 				</thead>

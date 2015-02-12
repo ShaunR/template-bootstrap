@@ -20,15 +20,15 @@
 		<form method="post" action="clientarea.php">
 			<input type="hidden" name="action" value="bulkdomain">
 			<div class="panel panel-default">
-				<table class="table table-striped table-sorted">
+				<table class="table table-striped">
 					<thead>
 						<tr>
 							<th class="text-center"><input type="checkbox" class="toggle-checkboxes" data-target=".domids"></th>
-							<th{if $orderby eq "domain"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=domains{if $q}&amp;q={$q}{/if}&amp;orderby=domain" title="{$LANG.clientareahostingdomain}">{$LANG.clientareahostingdomain}</a></th>
-							<th{if $orderby eq "regdate"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=domains{if $q}&amp;q={$q}{/if}&amp;orderby=regdate" title="{$LANG.clientareahostingregdate}">{$LANG.clientareahostingregdate}</a></th>
-							<th{if $orderby eq "nextduedate"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=domains{if $q}&amp;q={$q}{/if}&amp;orderby=nextduedate" title="{$LANG.clientareahostingnextduedate}">{$LANG.clientareahostingnextduedate}</a></th>
-							<th{if $orderby eq "status"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=domains{if $q}&amp;q={$q}{/if}&amp;orderby=status" title="{$LANG.clientareastatus}">{$LANG.clientareastatus}</a></th>
-							<th{if $orderby eq "autorenew"} class="sort-{$sort}"{/if}><a href="clientarea.php?action=domains{if $q}&amp;q={$q}{/if}&amp;orderby=autorenew" title="{$LANG.domainsautorenew}">{$LANG.domainsautorenew}</a></th>
+							<th><a href="clientarea.php?action=domains{if $q}&amp;q={$q}{/if}&amp;orderby=domain" title="{$LANG.clientareahostingdomain}">{$LANG.clientareahostingdomain}{if $orderby eq "domain"} <span class="fa fa-sort-{$sort}"</span>{/if}</a></th>
+							<th><a href="clientarea.php?action=domains{if $q}&amp;q={$q}{/if}&amp;orderby=regdate" title="{$LANG.clientareahostingregdate}">{$LANG.clientareahostingregdate}{if $orderby eq "regdate"} <span class="fa fa-sort-{$sort}"</span>{/if}</a></th>
+							<th><a href="clientarea.php?action=domains{if $q}&amp;q={$q}{/if}&amp;orderby=nextduedate" title="{$LANG.clientareahostingnextduedate}">{$LANG.clientareahostingnextduedate}{if $orderby eq "nextduedate"} <span class="fa fa-sort-{$sort}"</span>{/if}</a></th>
+							<th><a href="clientarea.php?action=domains{if $q}&amp;q={$q}{/if}&amp;orderby=status" title="{$LANG.clientareastatus}">{$LANG.clientareastatus}{if $orderby eq "status"} <span class="fa fa-sort-{$sort}"</span>{/if}</a></th>
+							<th><a href="clientarea.php?action=domains{if $q}&amp;q={$q}{/if}&amp;orderby=autorenew" title="{$LANG.domainsautorenew}">{$LANG.domainsautorenew}{if $orderby eq "autorenew"} <span class="fa fa-sort-{$sort}"</span>{/if}</a></th>
 							<th>&nbsp;</th>
 						</tr>
 					</thead>
