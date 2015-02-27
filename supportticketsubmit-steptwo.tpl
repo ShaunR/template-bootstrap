@@ -39,7 +39,7 @@
 			<div class="row form-group">
 				<div class="col-md-3">
 					<label for="name">{$LANG.supportticketsdepartment}</label>
-					<select name="deptid" class="form-control">
+					<select name="deptid" class="form-control" disabled onchange="getCustomFields()">
 						{foreach from=$departments item=department}
 						<option value="{$department.id}"{if $department.id eq $deptid} selected="selected"{/if}>{$department.name}</option>
 						{/foreach}
@@ -69,12 +69,7 @@
 				<label for="message">{$LANG.contactmessage}</label>
 				<textarea name="message" id="message" rows="12" class="form-control">{$message}</textarea>
 			</div>
-			{foreach key=num item=customfield from=$customfields}
-			<div class="form-group">
-				<label for="customfield{$customfield.id}">{$customfield.name}</label>
-				{$customfield.input} {$customfield.description}
-			</div>
-			{/foreach}
+			<div id="customFields" style="display:none;"></div>
 			<div id="attachements">
 				<h4>Attachements</h4>
 				<div class="form-group">
@@ -119,29 +114,39 @@
 				<span class="lead">{$LANG.pleasewait}</span>
 			</div>
 		</div>
-		
+
 		{if $kbsuggestions}
-		<script type="text/javascript">
 		{literal}
-			var currentcheckcontent, lastcheckcontent;
-			setTimeout(function() {
-				currentcheckcontent = $("#message").val();
+		<script language="javascript">
+			var currentcheckcontent,lastcheckcontent;
+			function getticketsuggestions() {
+				currentcheckcontent = jQuery("#message").val();
 				if (currentcheckcontent!=lastcheckcontent && currentcheckcontent!="") {
-					$.post(
-						"submitticket.php",
-						{ action: "getkbarticles", text: currentcheckcontent },
-						function(data){
-							if (data) {
-								$("#searchresults").html(data);
-								$("#searchresults").slideDown();
-							}
+					jQuery.post("submitticket.php", { action: "getkbarticles", text: currentcheckcontent }, function(data) {
+						if (data) {
+							jQuery("#searchresults").html(data);
+							jQuery("#searchresults").slideDown();
 						}
-					);
+					});
 					lastcheckcontent = currentcheckcontent;
 				}
-			}, 3000);
-		{/literal}
+				setTimeout('getticketsuggestions();', 3000);
+			}
+			getticketsuggestions();
 		</script>
+		{/literal}
 		{/if}
+
+		{literal}
+		<script language="javascript">
+			$( document ).ready(function() { getCustomFields(); });
+			function getCustomFields() {
+				jQuery("#department").prop('disabled', true);
+				jQuery("#customFields").load("submitticket.php", { action: "getcustomfields", deptid: jQuery("#department").val() });
+				jQuery("#customFields").slideDown();
+				jQuery("#department").prop('disabled', false);
+			}
+		</script>
+		{/literal}
 	</div>
 </section>
