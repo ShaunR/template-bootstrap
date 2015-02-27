@@ -7,7 +7,7 @@
 			<title>{if $kbarticle.title}{$kbarticle.title} - {/if}{$pagetitle} - {$companyname}</title>
 			{if $systemurl}<base href="{$systemurl}">{/if}
 	
-			<script type="text/javascript" src="templates/{$template}/assets/jquery/js/jquery-1.11.1.min.js"></script>
+			<script type="text/javascript" src="templates/{$template}/assets/jquery/js/jquery-1.11.2.min.js"></script>
 	
 			<script type="text/javascript" src="templates/{$template}/assets/bootstrap/js/bootstrap.min.js"></script>
 			<link href="templates/{$template}/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
