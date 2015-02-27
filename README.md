@@ -3,10 +3,10 @@ WHMCS Clientarea Bootstrap Template
 		
 Clientarea template for use with the WHMCS billing software.
 
-WHMCS Version: 5.3.9  
-jQuery Version: 1.11.1  
-Bootstrap Version: 3.3.0  
-Font Awesome 4.2.0  
+WHMCS Version: 5.3.12  
+jQuery Version: 1.11.2  
+Bootstrap Version: 3.3.2  
+Font Awesome 4.3.0  
 	
 	
 	
