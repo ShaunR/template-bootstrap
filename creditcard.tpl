@@ -1,5 +1,7 @@
 <section>
 	<div class="container">
+        <script type="text/javascript" src="includes/jscript/statesdropdown.js"></script>
+
 		<div class="page-header">
 			<h1>{$LANG.creditcard}</h1>
 		</div>
@@ -92,7 +94,6 @@
 						<label class="col-md-4 control-label" for="country">{$LANG.clientareacountry}</label>
 						<div class="col-md-8">
 							{$countriesdropdown}
-							{literal}<script type="text/javascript">$("#country").addClass("form-control");</script>{/literal}
 						</div>
 					</div>
 					<div class="form-group">
@@ -229,6 +230,14 @@
 								}
 							});
 							$('input[name=ccinfo]:checked').click();
+
+                            $('input[type=text]').addClass('form-control');
+                            $('select').addClass('form-control');
+
+                            $('select').on('change', function ()
+                            {
+                                $('select').removeClass('form-control').addClass('form-control'); // Add form-control class on select change.  Remove it too in case it already exists.
+                            });
 						});
 						{/literal}
 					</script>

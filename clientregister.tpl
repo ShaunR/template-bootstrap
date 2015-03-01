@@ -206,6 +206,11 @@
 				// Make custom field inputs the correct size
 				$('input[type=text]').addClass('form-control');
 				$('select').addClass('form-control');
+
+                $('select').on('change', function ()
+                {
+                    $('select').removeClass('form-control').addClass('form-control'); // Add form-control class on select change.  Remove it too in case it already exists.
+                });
 				// Password Strength
 				$('#password').keyup(function() {
 					$(this).parent().parent().removeClass('has-warning has-error has-success');

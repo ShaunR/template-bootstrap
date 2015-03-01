@@ -326,6 +326,11 @@
 			$(function() { 
 				$('#stateselect').addClass('form-control');
 				$('#country').addClass('form-control');
+
+                $('select').on('change', function ()
+                {
+                    $('select').removeClass('form-control').addClass('form-control'); // Add form-control class on select change.  Remove it too in case it already exists.
+                });
 			});
 		</script>
 		{/literal}
