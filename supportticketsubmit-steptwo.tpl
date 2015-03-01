@@ -39,7 +39,7 @@
 			<div class="row form-group">
 				<div class="col-md-3">
 					<label for="name">{$LANG.supportticketsdepartment}</label>
-					<select name="deptid" class="form-control" disabled onchange="getCustomFields()">
+					<select name="deptid" class="form-control" id="department" disabled onchange="getCustomFields()">
 						{foreach from=$departments item=department}
 						<option value="{$department.id}"{if $department.id eq $deptid} selected="selected"{/if}>{$department.name}</option>
 						{/foreach}
@@ -70,15 +70,15 @@
 				<textarea name="message" id="message" rows="12" class="form-control">{$message}</textarea>
 			</div>
 			<div id="customFields" style="display:none;"></div>
-			<div id="attachements">
-				<h4>Attachements</h4>
+			<div id="attachments">
+				<h4>{$LANG.supportticketsticketattachments}</h4>
 				<div class="form-group">
 					<input type="file" name="attachments[]">
 				</div>
 			</div>
 			<script type="text/javascript">
 			{literal}
-			function extraAttachment() { $("#attachements").append('<div class="form-group"><input type="file" name="attachments[]"></div>');}
+			function extraAttachment() { $("#attachments").append('<div class="form-group"><input type="file" name="attachments[]"></div>');}
 			{/literal}
 			</script>
 			<a href="javascript:void(0)" onclick="extraAttachment();"><img src="images/add.gif" alt="add icon"> {$LANG.addmore}</a>
