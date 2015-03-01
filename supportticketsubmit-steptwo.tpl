@@ -71,7 +71,7 @@
 			</div>
 			<div id="customFields" style="display:none;"></div>
 			<div id="attachements">
-				<h4>Attachements</h4>
+				<h4>{$LANG.supportticketsticketattachments}</h4>
 				<div class="form-group">
 					<input type="file" name="attachments[]">
 				</div>
