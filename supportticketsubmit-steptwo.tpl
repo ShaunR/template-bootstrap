@@ -38,8 +38,8 @@
 			</div>
 			<div class="row form-group">
 				<div class="col-md-3">
-					<label for="name">{$LANG.supportticketsdepartment}</label>
-					<select name="deptid" class="form-control" disabled onchange="getCustomFields()">
+					<label for="department">{$LANG.supportticketsdepartment}</label>
+					<select name="deptid" id="department" class="form-control" disabled onchange="getCustomFields()">
 						{foreach from=$departments item=department}
 						<option value="{$department.id}"{if $department.id eq $deptid} selected="selected"{/if}>{$department.name}</option>
 						{/foreach}
