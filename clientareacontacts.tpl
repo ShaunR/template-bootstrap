@@ -327,6 +327,7 @@
 			$(function() { 
 				$('#stateselect').addClass('form-control');
 				$('#country').addClass('form-control');
+				$('#country').on('change', function() { $('#stateselect').addClass('form-control'); });
 			});
 		</script>
 		{/literal}

@@ -203,6 +203,7 @@
 		{literal}
 		<script type="text/javascript">
 			$(function() {
+				$('#country').on('change', function() { $('#stateselect').addClass('form-control'); });
 				// Make custom field inputs the correct size
 				$('input[type=text]').addClass('form-control');
 				$('select').addClass('form-control');

@@ -178,6 +178,7 @@
 				// Make custom field inputs the correct size
 				$('input[type=text]').addClass('form-control');
 				$('select').addClass('form-control');
+				$('#country').on('change', function() { $('#stateselect').addClass('form-control'); });
 			});
 		</script>
 		{/literal}

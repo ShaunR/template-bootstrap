@@ -270,3 +270,10 @@
 		{/if}
 	</div>
 </section>
+<script type="text/javascript" src="includes/jscript/statesdropdown.js"></script>
+<script type="text/javascript" src="includes/jscript/creditcard.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#country').on('change', function() { $('#stateselect').addClass('form-control'); });
+	});
+</script>
