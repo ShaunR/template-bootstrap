@@ -10,7 +10,7 @@ $pdf->SetFont('freesans','',13);
 $pdf->Cell(0,6,trim($companyaddress[0]),0,1,'R');
 $pdf->SetFont('freesans','',9);
 for ( $i = 1; $i <= ((count($companyaddress)>6) ? count($companyaddress) : 6); $i += 1) {
-	$pdf->Cell(0,4,trim($companyaddress[$i]),0,1,'R');
+    $pdf->Cell(0,4,trim($companyaddress[$i]),0,1,'R');
 }
 $pdf->Ln(5);
 
@@ -36,14 +36,14 @@ $pdf->SetFont('freesans','B',10);
 $pdf->Cell(0,4,$_LANG['quoterecipient'],0,1);
 $pdf->SetFont('freesans','',9);
 if ($clientsdetails["companyname"]) {
-	$pdf->Cell(0,4,$clientsdetails["companyname"],0,1,'L');
-	$pdf->Cell(0,4,$_LANG["invoicesattn"].": ".$clientsdetails["firstname"]." ".$clientsdetails["lastname"],0,1,'L');
+    $pdf->Cell(0,4,$clientsdetails["companyname"],0,1,'L');
+    $pdf->Cell(0,4,$_LANG["invoicesattn"].": ".$clientsdetails["firstname"]." ".$clientsdetails["lastname"],0,1,'L');
 } else {
-	$pdf->Cell(0,4,$clientsdetails["firstname"]." ".$clientsdetails["lastname"],0,1,'L');
+    $pdf->Cell(0,4,$clientsdetails["firstname"]." ".$clientsdetails["lastname"],0,1,'L');
 }
 $pdf->Cell(0,4,$clientsdetails["address1"],0,1,'L');
 if ($clientsdetails["address2"]) {
-	$pdf->Cell(0,4,$clientsdetails["address2"],0,1,'L');
+    $pdf->Cell(0,4,$clientsdetails["address2"],0,1,'L');
 }
 $pdf->Cell(0,4,$clientsdetails["city"].', '.$clientsdetails["state"].', '.$clientsdetails["postcode"],0,1,'L');
 $pdf->Cell(0,4,$clientsdetails["country"],0,1,'L');
@@ -52,8 +52,8 @@ $pdf->Ln(10);
 
 if ($proposal) {
     $pdf->SetFont('freesans','',9);
-	$pdf->MultiCell(170,5,$proposal);
-	$pdf->Ln(10);
+    $pdf->MultiCell(170,5,$proposal);
+    $pdf->Ln(10);
 }
 
 $pdf->SetDrawColor(200);
@@ -73,7 +73,7 @@ foreach ($lineitems AS $item) {
     $tblhtml .= '
     <tr bgcolor="#fff">
         <td align="center">'.$item['qty'].'</td>
-        <td align="left">'.nl2br($item['description']).'<br></td>
+        <td align="left">'.nl2br($item['description']).'<br /></td>
         <td align="center">'.$item['unitprice'].'</td>
         <td align="center">'.$item['discount'].'</td>
         <td align="center">'.$item['total'].'</td>
@@ -104,9 +104,9 @@ $tblhtml .= '
 $pdf->writeHTML($tblhtml, true, false, false, false, '');
 
 if ($notes) {
-	$pdf->Ln(6);
+    $pdf->Ln(6);
     $pdf->SetFont('freesans','',8);
-	$pdf->MultiCell(170,5,$_LANG['invoicesnotes'].": $notes");
+    $pdf->MultiCell(170,5,$_LANG['invoicesnotes'].": $notes");
 }
 
 ?>
