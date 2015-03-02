@@ -81,7 +81,7 @@
 			function extraAttachment() { $("#attachments").append('<div class="form-group"><input type="file" name="attachments[]"></div>');}
 			{/literal}
 			</script>
-			<a href="javascript:void(0)" onclick="extraAttachment();"><img src="images/add.gif" alt="add icon"> {$LANG.addmore}</a>
+			<a href="javascript:void(0)" onclick="extraAttachment();"><span class="fa fa-plus-circle"></span> {$LANG.addmore}</a>
 			({$LANG.supportticketsallowedextensions}: {$allowedfiletypes})
 		
 			<div id="searchresults" style="display:none;"></div>
