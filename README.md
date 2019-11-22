@@ -30,22 +30,6 @@ To stay current with the latest bootstrap, font-awesome, jquery, and WHMCS relea
 
 
 
-Bug tracker
------------
-
-https://github.com/whmcsapps/template-bootstrap/issues
-
-
-
-IRC
----
-
-Server: irc.freenode.net
-
-Channel: #whmcs
-
-
-
 Authors
 -------
 
